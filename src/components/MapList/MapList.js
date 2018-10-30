@@ -1,5 +1,6 @@
 import React from 'react';
 import './MapList.css';
+import Maps from '../Maps/Maps';
 
 const MapList = ({routeChange}) => { //passed the routeChange function to here as a prop to change the state based off the the route specified in each onClick
 	return (
@@ -8,18 +9,18 @@ const MapList = ({routeChange}) => { //passed the routeChange function to here a
 			<h3>A site featuring good angles on all competitive maps</h3>
 			<h1>Current Ranked Maps</h1>
 			<div className="mapList">
-				<img onClick={routeChange.bind('', 'bank')} src={require("../../images/Bank.jpg")}></img>
-				<img src={require("../../images/Border.jpg")}></img>
-				<img src={require("../../images/Clubhouse.jpg")}></img>
-				<img src={require("../../images/Hereford.jpg")}></img>
-				<img src={require("../../images/Skyscraper.png")}></img>
-				<img src={require("../../images/ThemePark.png")}></img>
-				<img src={require("../../images/Villa.jpg")}></img>
-				<img src={require("../../images/Bank.jpg")}></img>
-				<img src={require("../../images/Bank.jpg")}></img>
-				<img src={require("../../images/Bank.jpg")}></img>
-				<img src={require("../../images/Bank.jpg")}></img>
-				<img src={require("../../images/Bank.jpg")}></img>
+				<Maps onClick={routeChange.bind('', 'bank')} title="Bank" picture={require("../../images/Bank.jpg")}/>
+				<Maps onClick={routeChange.bind('', 'border')} title="Border" picture={require("../../images/Border.jpg")}/>
+				<Maps onClick={routeChange.bind('', 'clubhouse')} title="Clubhouse" picture={require("../../images/Clubhouse.jpg")}/>
+				<Maps onClick={routeChange.bind('', 'hereford')} title="Hereford" picture={require("../../images/Hereford.jpg")}/>
+				<Maps onClick={routeChange.bind('', 'skyscraper')} title="Skyscraper" picture={require("../../images/Skyscraper.png")}/>
+				<Maps onClick={routeChange.bind('', 'themePark')} title="Theme Park" picture={require("../../images/ThemePark.png")}/>
+				<Maps onClick={routeChange.bind('', 'villa')} title="Villa" picture={require("../../images/Villa.jpg")}/>
+				<Maps onClick={routeChange.bind('', 'bank')} title="Bank" picture={require("../../images/Bank.jpg")}/>
+				<Maps onClick={routeChange.bind('', 'bank')} title="Bank" picture={require("../../images/Bank.jpg")}/>
+				<Maps onClick={routeChange.bind('', 'bank')} title="Bank" picture={require("../../images/Bank.jpg")}/>
+				<Maps onClick={routeChange.bind('', 'bank')} title="Bank" picture={require("../../images/Bank.jpg")}/>
+				<Maps onClick={routeChange.bind('', 'bank')} title="Bank" picture={require("../../images/Bank.jpg")}/>
 			</div>
 		</div>
 	);

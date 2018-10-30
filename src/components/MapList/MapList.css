@@ -2,15 +2,8 @@
 	border-bottom: 2px solid white; 
 }
 .mapList {
-	margin: 0 20%;
+	margin: 0 10%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-}
-.mapList img {
-	margin: 20px;
-	height: 110px;
-	width: 250px;
-	cursor: pointer;
-	border: 2px solid #8F003D;
 }
