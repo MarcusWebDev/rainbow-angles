@@ -1,0 +1,15 @@
+.navBarContainer {
+	z-index: 10;
+	height: 100px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #8F003D;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+.navBarContainer p {
+	margin: 0;
+	font-size: 70px;
+	cursor: pointer;
+}

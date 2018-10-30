@@ -1,0 +1,17 @@
+body {
+  background: repeating-linear-gradient(
+  45deg,
+  #262626,
+  #262626 80px,
+  #0D0C13 80px,
+  #0D0C13 160px
+);
+  color: white;
+  text-align: center;
+}
+.contentContainer {
+  margin: 100px auto 0;
+  width: 90%;
+  height: 100vh;
+  background: #0D0C13;
+}
