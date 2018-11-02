@@ -1,0 +1,9 @@
+.scroll {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	overflow-y: scroll;
+	border: 5px solid black; 
+	max-width: 600px;
+	margin: 10px 25px;
+}

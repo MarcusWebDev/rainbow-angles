@@ -1,5 +1,7 @@
 import React from 'react';
 import './MapGuide.css';
+import Scroll from '../Scroll/Scroll';
+import Carousel from "../Carousel/Carousel";
 
 const MapGuide = ({headerPicture, header, text, pictures, video}) => {
 	return (
@@ -8,11 +10,14 @@ const MapGuide = ({headerPicture, header, text, pictures, video}) => {
 				<img src={headerPicture} />
 				<h1>{header}</h1>
 			</div>
-			<div className="anglesContainer">
-				<h1>Bomb</h1>
-				<p>{text[1]}</p>
-				<h1>Secure Area</h1>
-				<h1>Hostage</h1>
+			<div>
+				<h1>Objective</h1>
+				<div className="anglesContentContainer">
+					<Carousel pictures={pictures}/>
+					<Scroll>
+						<p className="scrollText">{text}</p>
+					</Scroll>
+				</div>
 			</div>
 		</div>
 	);
