@@ -7,7 +7,6 @@ import MapGuide from './components/MapGuide/MapGuide';
 import changeRoute from './containers/actions';
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     route: state.setRoute.route,
   }

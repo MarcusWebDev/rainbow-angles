@@ -5,6 +5,7 @@ const initialStateRoute = {
 }
 
 const setRoute = (state=initialStateRoute, action={}) => {
+	console.log(action.type);
 	switch(action.type) {
 		case CHANGE_ROUTE:
 			return Object.assign({}, state, {
@@ -16,28 +17,26 @@ const setRoute = (state=initialStateRoute, action={}) => {
 }
 
 const initialStateCarousel = {
-	slides: [],
 	slideIndex: 0
 }
 
 const controlCarousel = (state=initialStateCarousel, action={}) => {
 	let currentIndex;
+	console.log(action.type);
 	switch (action.type) {
 		case NEXT_SLIDE: {
-			console.log(action.payload);
-			let currentIndex = action.payload;
+			console.log('next slide worked');
+			let currentIndex = state.slideIndex;
 			const index = currentIndex === state.slides.length - 1 ? 0 : ++currentIndex;
 			return {
-				slides: state.slides[index],
 				slideIndex: index
 			}
 		}
 		case PREV_SLIDE: {
-			console.log(action.payload);
-			let currentIndex = action.payload;
+			console.log('previous slide worked');
+			let currentIndex = state.slideIndex;
 			const index = currentIndex === 0 ? state.slides.length - 1 : --currentIndex;
 			return {
-				slides: state.slides[index],
 				slideIndex: index
 			}
 		}
