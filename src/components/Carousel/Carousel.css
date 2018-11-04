@@ -1,3 +1,12 @@
 .carouselContainer {
 	position: relative;
+	margin: 0 10px;
+}
+.anglesContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.scrollText {
+	margin: 20px;
 }

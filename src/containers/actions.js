@@ -2,19 +2,19 @@ import { CHANGE_ROUTE, NEXT_SLIDE, PREV_SLIDE } from './constants';
 
 
 
-const changeRoute = (route) => ({
+export const changeRoute = (route) => ({
 	type: CHANGE_ROUTE,
 	payload: route
 })
 
-const nextSlide = (slideIndex) => ({
+export const nextSlide = (slideIndex, pictures) => ({
 	type: NEXT_SLIDE,
-	payload: slideIndex
+	slideIndex: slideIndex,
+	slides: pictures
 })
 
-const prevSlide = (slideIndex) => ({
+export const prevSlide = (slideIndex, pictures) => ({
 	type: PREV_SLIDE,
-	payload: slideIndex
+	slideIndex: slideIndex,
+	slides: pictures
 })
-
-export default changeRoute;

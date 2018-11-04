@@ -4,8 +4,7 @@ const initialStateRoute = {
 	route: 'mapList'
 }
 
-const setRoute = (state=initialStateRoute, action={}) => {
-	console.log(action.type);
+export const setRoute = (state=initialStateRoute, action={}) => {
 	switch(action.type) {
 		case CHANGE_ROUTE:
 			return Object.assign({}, state, {
@@ -17,26 +16,25 @@ const setRoute = (state=initialStateRoute, action={}) => {
 }
 
 const initialStateCarousel = {
+	slides: [],
 	slideIndex: 0
 }
 
-const controlCarousel = (state=initialStateCarousel, action={}) => {
-	let currentIndex;
-	console.log(action.type);
+export const controlCarousel = (state=initialStateCarousel, action={}) => {
 	switch (action.type) {
 		case NEXT_SLIDE: {
-			console.log('next slide worked');
-			let currentIndex = state.slideIndex;
-			const index = currentIndex === state.slides.length - 1 ? 0 : ++currentIndex;
+			let currentIndex = action.slideIndex;
+			const index = currentIndex === action.slides.length - 1 ? 0 : ++currentIndex; 
 			return {
+				slides: [action.slides],
 				slideIndex: index
 			}
 		}
 		case PREV_SLIDE: {
-			console.log('previous slide worked');
-			let currentIndex = state.slideIndex;
-			const index = currentIndex === 0 ? state.slides.length - 1 : --currentIndex;
+			let currentIndex = action.slideIndex;
+			const index = currentIndex === 0 ? action.slides.length - 1 : --currentIndex;
 			return {
+				slides: [action.slides],
 				slideIndex: index
 			}
 		}
@@ -46,5 +44,3 @@ const controlCarousel = (state=initialStateCarousel, action={}) => {
 			
 	}
 }
-
-export default setRoute;
