@@ -1,0 +1,22 @@
+.dotsContainer {
+	display: flex;
+	flex-direction: row;
+	margin-left: 25px;
+}
+.dot {
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background: #8E003B;
+	margin: 5px;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+.dot:hover {
+	transition: 0.3s;
+	background: #4F0021;
+}
+.dot-active {
+	transition: 0.3s;
+	background: #4F0021;
+}

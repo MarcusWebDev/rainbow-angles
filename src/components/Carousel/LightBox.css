@@ -1,0 +1,14 @@
+.lightBoxContainer {
+	display: none;
+}
+.lightBoxContainer-active {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100vh;
+	width: 100vw;
+	background: rgba(0,0,0,0.7);
+}
+.lightBoxPicture {
+	width: 100%;
+}

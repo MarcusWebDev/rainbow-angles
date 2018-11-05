@@ -3,10 +3,64 @@
 	margin: 0 10px;
 }
 .anglesContainer {
+	margin-top: 35px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: center;
 }
 .scrollText {
 	margin: 20px;
+}
+.textContainer {
+	position: relative;
+}
+.objectiveNav {
+	position: absolute;
+	right: 25px;
+	top: -33px;
+	display: flex;
+	flex-direction: row;
+}
+.objectiveNav li {
+	cursor: pointer;
+	list-style-type: none;
+}
+.objectiveNav li {
+	padding: 10px;
+}
+.objectiveNav li:hover {
+	transition: ease 0.3s;
+	background: #4F0021;
+}
+.objectiveNavButton {
+	background: #8E003B;
+}
+.objectiveNavButton-active {
+	transition: ease 0.3s;
+	background: #4F0021;
+}
+.fullBorder {
+	border: 2px solid black;
+}
+.noBorderLeft {
+	border: 2px solid black;
+	border-left: none;
+}
+.skewedNavButton {
+	position: relative;
+	z-index: 2;
+	right: 82px;
+	transform: skewX(-30deg);
+}
+.skewedNavButton a {
+	transform: skewX(30deg); 
+	display: block;
+}
+.unskewedNavButton {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	right: 0;
+	width: 80px;
 }

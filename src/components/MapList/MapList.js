@@ -6,7 +6,7 @@ const MapList = ({routeChange}) => { //passed the routeChange function to here a
 	return (
 		<div className="mapListContainer">
 			<h1>Welcome to Rainbow Angles!</h1>
-			<h3>A site featuring good angles on all competitive maps</h3>
+			<h3>A site featuring good angles on all competitive maps of Rainbowsix Siege!</h3>
 			<h1>Current Ranked Maps</h1>
 			<div className="mapList">
 				<Maps onClick={() => routeChange('bank')} title="Bank" picture={require("../../images/Bank.jpg")}/>

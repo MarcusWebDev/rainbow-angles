@@ -1,6 +1,6 @@
 .navBarContainer {
 	z-index: 10;
-	height: 100px;
+
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -12,4 +12,14 @@
 	margin: 0;
 	font-size: 70px;
 	cursor: pointer;
+}
+@media (max-width: 740px) {
+	.navBarContainer p {
+		font-size: 55px;
+	}
+}
+@media (max-width: 500px) {
+	.navBarContainer p {
+		font-size: 30px;
+	}
 }

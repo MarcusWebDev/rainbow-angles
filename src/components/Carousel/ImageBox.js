@@ -1,10 +1,11 @@
 import React from 'react';
-import './ImageBox.css'
+import LightBox from './LightBox';
+import './ImageBox.css';
 
-const ImageBox = ({pictures, index}) => {
+const ImageBox = ({pictures, index, onClick}) => {
 	const imageArray = pictures[index].map((picture, i) => {
 		return (
-			<img key={i} src={pictures[index][i]} />
+			<img key={i} src={pictures[index][i]} onClick={onClick} />
 		);
 	})
 

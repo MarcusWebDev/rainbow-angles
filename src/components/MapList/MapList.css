@@ -7,3 +7,9 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+
+@media (max-width: 980px) {
+	.mapList {
+		margin: 0;
+	}
+}
