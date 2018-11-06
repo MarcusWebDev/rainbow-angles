@@ -27,11 +27,12 @@ export const toTargetSlide = (targetSlide) => ({
 	type: TO_TARGET_SLIDE,
 	targetSlide: targetSlide
 })
-export const turnOnLightBox = () => ({
+export const lightBoxOn = (lightBoxPicture) => ({
 	type: TURN_ON_LIGHT_BOX,
-	payload: 'on'
+	status: 'on',
+	picture: lightBoxPicture
 })
-export const turnOffLightBox = () => ({
+export const lightBoxOff = () => ({
 	type: TURN_OFF_LIGHT_BOX,
-	payload: 'off'
+	status: 'off'
 })

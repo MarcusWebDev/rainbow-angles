@@ -25,36 +25,38 @@ export const controlCarousel = (state=initialStateCarousel, action={}) => {
 		case NEXT_SLIDE: {
 			let currentIndex = action.slideIndex;
 			const index = currentIndex === action.slides.length - 1 ? 0 : ++currentIndex; 
-			return {
+			return Object.assign({}, state, { 
 				slideIndex: index
-			}
+			})
 		}
 		case PREV_SLIDE: {
 			let currentIndex = action.slideIndex;
 			const index = currentIndex === 0 ? action.slides.length - 1 : --currentIndex;
-			return {
+			return Object.assign({}, state, {
 				slideIndex: index
-			}
+			})
 		}
 		case TO_OBJECTIVE: {
-			return {
+			return Object.assign({}, state, { 
 				slideIndex: action.objectiveStart
-			}
+			})
 		}
 		case TO_TARGET_SLIDE: {
-			return {
+			return Object.assign({}, state, { 
 				slideIndex: action.targetSlide
-			}
+			})
 		}
 		case TURN_ON_LIGHT_BOX: {
-			return {
-				lightBoxStatus: action.payload
-			}
+			console.log(action.picture);
+			return Object.assign({}, state, { 
+				lightBoxStatus: action.status,
+				lightBoxPicture: action.picture
+			})
 		}
 		case TURN_OFF_LIGHT_BOX: {
-			return {
-				lightBoxStatus: action.payload
-			}
+			return Object.assign({}, state, { 
+				lightBoxStatus: action.status
+			})
 		}
 		default:
 			return state;

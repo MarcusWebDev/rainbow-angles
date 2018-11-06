@@ -1,22 +1,20 @@
 import React from 'react';
 import './LightBox.css';
 
-const LightBox = ({pictures, index, status, onClick}) => {
+const LightBox = ({picture, status, onClick}) => {
+	console.log(onClick)
 	let className = 'lightBoxContainer';
-	status === 'on' ? className += 'lightBoxContainer-active' : className = 'lightBoxContainer';
-
-	const lightBoxArray = pictures.map((picture, i) => {
-		return (
-			<div className="lightBoxPicture" style={{background: `url(${pictures[index][i]}) center no-repeat`, backgroundSize: 'cover'}}>
-			</div>
-		);
-	})
+	status === 'on' ? className += ' lightBoxContainer-active' : className = 'lightBoxContainer';
 
 	return (
 		<div className={className} onClick={onClick}>
-			{lightBoxArray}
+			<div className="lightBoxPictureContainer">
+				<div className="lightBoxPicture" style={{background: `url(${picture}) center no-repeat`, backgroundSize: 'cover'}}>
+				</div>
+			</div>
 		</div>
 	);
 }
+
 
 export default LightBox;

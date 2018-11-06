@@ -2,13 +2,24 @@
 	display: none;
 }
 .lightBoxContainer-active {
+	z-index: 100;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
 	height: 100vh;
 	width: 100vw;
-	background: rgba(0,0,0,0.7);
+	background: rgba(0,0,0,0.9);
+	cursor: pointer;
+}
+.lightBoxPictureContainer {
+	margin: 15px auto;
+	display: flex;
+	flex-direction: column;
 }
 .lightBoxPicture {
-	width: 100%;
+	height: 80vh;
+	width: 100vw;
 }

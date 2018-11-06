@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import Arrow from './Arrow';
-import { nextSlide, prevSlide, toObjective, toTargetSlide, turnOnLightBox, turnOffLightBox } from '../../containers/actions';
+import { nextSlide, prevSlide, toObjective, toTargetSlide, lightBoxOn, lightBoxOff } from '../../containers/actions';
 import Scroll from '../Scroll/Scroll';
 import ImageBox from './ImageBox';
 import LightBox from './LightBox';
@@ -9,9 +9,11 @@ import Dots from './Dots';
 import './Carousel.css';
 
 const mapStateToProps = (state) => {
+	console.log(state);
 	return {
 		slideIndex: state.controlCarousel.slideIndex,
-		lightBoxStatus: state.controlCarousel.lightBoxActive
+		lightBoxStatus: state.controlCarousel.lightBoxStatus,
+		lightBoxPicture: state.controlCarousel.lightBoxPicture
 	}
 }
 
@@ -21,15 +23,15 @@ const mapDispatchToProps = (dispatch) => {
 		slideChangePrev: (slideIndex, pictures) => {dispatch(prevSlide(slideIndex, pictures))},
 		navigateToObjective: (objectiveStart) => {dispatch(toObjective(objectiveStart))},
 		navigateToTargetSlide: (targetSlide) => {dispatch(toTargetSlide(targetSlide))},
-		turnOnLightBox: () => {dispatch(turnOnLightBox)},
-		turnOffLightBox: () => {dispatch(turnOffLightBox)}
+		turnOnLightBox: (lightBoxPicture) => {dispatch(lightBoxOn(lightBoxPicture))},
+		turnOffLightBox: () => {dispatch(lightBoxOff())}
 	}
 }
 
 class Carousel extends Component {
 	render () {	
 
-		const { pictures, slideIndex, text, objectiveStart, lightBoxStatus, slideChangeNext, slideChangePrev, navigateToObjective, navigateToTargetSlide, turnOnLightBox, turnOffLightBox } = this.props;
+		const { pictures, slideIndex, text, objectiveStart, lightBoxStatus, lightBoxPicture, slideChangeNext, slideChangePrev, navigateToObjective, navigateToTargetSlide, turnOnLightBox, turnOffLightBox } = this.props;
 
 		let secureAreaActivate = 'objectiveNavButton';
 		let bombActivate = 'objectiveNavButton';
@@ -37,6 +39,7 @@ class Carousel extends Component {
 		secureAreaActivate = slideIndex >= objectiveStart[0] && slideIndex < objectiveStart[1] ? secureAreaActivate += ' objectiveNavButton-active ' : secureAreaActivate = 'objectiveNavButton ';
 		bombActivate = slideIndex >= objectiveStart[1] && slideIndex < objectiveStart[2] ? bombActivate += ' objectiveNavButton-active ' : bombActivate = 'objectiveNavButton ';
 		hostageActivate = slideIndex >= objectiveStart[2] ? hostageActivate += ' objectiveNavButton-active ' : hostageActivate = 'objectiveNavButton ';
+		console.log(pictures);
 		 return (
 		 	<div>
 			 	<h1> 
@@ -51,8 +54,8 @@ class Carousel extends Component {
 					<div className="carouselContainer">
 						<Arrow direction="left" onClick={() => slideChangePrev(slideIndex, pictures)} />
 						<Scroll>
-							<ImageBox pictures={pictures} index={slideIndex} onClick={turnOnLightBox} />
-							<LightBox pictures={pictures} index={slideIndex} status={lightBoxStatus} onClick={turnOffLightBox}/>
+							<ImageBox pictures={pictures} index={slideIndex} onClick={(test) => turnOnLightBox(test)}/>
+							<LightBox picture={lightBoxPicture} status={lightBoxStatus} onClick={() => turnOffLightBox()}/>
 						</Scroll>
 						<Arrow direction="right" onClick={() => slideChangeNext(slideIndex, pictures)} />
 						<Dots pictures={pictures} index={slideIndex} navigateToTargetSlide={navigateToTargetSlide}/>
