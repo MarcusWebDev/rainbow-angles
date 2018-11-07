@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/Chalet.d056d3bf.jpg"
   },
   {
-    "revision": "0164d3925f332535581b",
-    "url": "/static/css/main.c97a77cf.chunk.css"
+    "revision": "af841fa7812ea76b95f7",
+    "url": "/static/css/main.e563143e.chunk.css"
   },
   {
     "revision": "c2908f4a3cc507ec6bb1",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/static/media/logo.1298c79f.png"
   },
   {
-    "revision": "0164d3925f332535581b",
-    "url": "/static/js/main.0164d392.chunk.js"
+    "revision": "af841fa7812ea76b95f7",
+    "url": "/static/js/main.af841fa7.chunk.js"
   },
   {
     "revision": "771d7dabdfda35d00ec2bf7ff05c90e8",
@@ -72,7 +72,7 @@ self.__precacheManifest = [
     "url": "/static/media/biohazardContainer.39927b65.png"
   },
   {
-    "revision": "5986c0c98b634cdc067eb5f235d03f8f",
+    "revision": "ba6d9757cef4c28ce13269f80a0307c4",
     "url": "/index.html"
   }
 ];
