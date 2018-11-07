@@ -79,6 +79,9 @@
 	right: 0;
 	width: 80px;
 }
+.mobileNavIcon {
+	display: none;
+}
 .desktop {
 	display: flex;
 }
@@ -133,8 +136,23 @@
 	.objectiveNavMobile li {
 		padding: 5px;
 	}
-	.objectiveNavMobile li a {
-
+}
+@media (max-width: 480px) {
+	.mobileNavIcon {
+		display: block;
+		height: 35px;
 	}
-
+	.mobileNavText {
+		display: none;
+	}
+	.hostageSkew {
+		right: 50px;
+	}
+	.hostageSkew a {
+		display: none;
+	}
+	.hostageSkew img {
+		transform: skew(-30deg);
+		padding-right: 8px;
+	}
 }

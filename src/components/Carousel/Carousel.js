@@ -52,10 +52,21 @@ class Carousel extends Component {
 			 	 	}
 			 	</h1>
 			 	<nav className="objectiveNavMobile phone">
-					<li className={`generalUseSkew fullBorder ${generalUseActivate}`} onClick={() => navigateToObjective(0)} ><a>General Use</a></li>
-					<li className={`zIndex1 fullBorder ${secureAreaActivate}`} onClick={() => navigateToObjective(objectiveStart[0])} ><a>Secure Area</a></li>
-					<li className={`zIndex1 noBorderLeft ${bombActivate}`} onClick={() => navigateToObjective(objectiveStart[1])} ><a>Bomb</a></li>
-					<li className={`hostageSkew fullBorder ${hostageActivate}`} onClick={() => navigateToObjective(objectiveStart[2])} ><a>Hostage</a></li>
+					<li className={`generalUseSkew fullBorder ${generalUseActivate}`} onClick={() => navigateToObjective(0)} >
+						<a>General Use</a>
+					</li>
+					<li className={`zIndex1 fullBorder ${secureAreaActivate}`} onClick={() => navigateToObjective(objectiveStart[0])} >
+						<a className="mobileNavText">Secure Area</a>
+						<img className="mobileNavIcon" src={require('../../images/biohazardContainer.png')} />
+					</li>
+					<li className={`zIndex1 noBorderLeft ${bombActivate}`} onClick={() => navigateToObjective(objectiveStart[1])} >
+						<a className="mobileNavText">Bomb</a>
+						<img className="mobileNavIcon" src={require('../../images/bomb.png')} />
+					</li>
+					<li className={`hostageSkew fullBorder ${hostageActivate}`} onClick={() => navigateToObjective(objectiveStart[2])} >
+						<a className="mobileNavText">Hostage</a>
+						<img className="mobileNavIcon" src={require('../../images/hostage.png')} />
+					</li>
 				</nav>
 			 	<div className="anglesContainer">
 					<div className="carouselContainer">
