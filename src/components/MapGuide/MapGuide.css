@@ -15,7 +15,7 @@
 	background: rgba(0,0,0,0.7);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
 	.headerContainer {
 		height: 500px;
 	}
@@ -23,8 +23,21 @@
 		font-size: 50px;
 	}
 }
-@media (max-width: 950px) {
+@media (max-width: 1060px) {
 	.headerContainer {
 		height: 400px;
+	}
+}
+@media (max-width: 750px) {
+	.headerContainer {
+		height: 300px;
+	}
+}
+@media (max-width: 480px) {
+	.headerContainer {
+		height: 200px;
+	}
+	.headerContainer h1 {
+		font-size: 30px;
 	}
 }

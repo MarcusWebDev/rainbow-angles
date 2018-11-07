@@ -1,14 +1,16 @@
 .carouselContainer {
+	display: flex;
+	flex-direction: column;
 	position: relative;
 	margin: 0 10px;
 }
 .anglesContainer {
-	margin-top: 35px;
+	margin-top: 45px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
-.scrollText {
+.anglesText {
 	margin: 20px;
 }
 .textContainer {
@@ -24,8 +26,6 @@
 .objectiveNav li {
 	cursor: pointer;
 	list-style-type: none;
-}
-.objectiveNav li {
 	padding: 10px;
 }
 .objectiveNav li:hover {
@@ -38,6 +38,20 @@
 .objectiveNavButton-active {
 	transition: ease 0.3s;
 	background: #4F0021;
+}
+.objectiveNavMobile {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	list-style-type: none;
+}
+.objectiveNavMobile li {
+	cursor: pointer;
+	padding: 10px;
+}
+.objectiveNavMobile li:hover {
+	transition: ease 0.3s;
+	background: #4F0021;	
 }
 .fullBorder {
 	border: 2px solid black;
@@ -63,4 +77,63 @@
 	justify-content: flex-end;
 	right: 0;
 	width: 80px;
+}
+.desktop {
+	display: flex;
+}
+.phone {
+	display: none;
+}
+@media (max-width: 1060px) {
+	.anglesContainer {
+		flex-direction: column;
+		margin-top: 0;
+	}
+	.anglesText {
+		margin: 0px 20px;
+	}
+	.generalUseSkew {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		left: 40px;
+		transform: skewX(-30deg);
+		width: 120px;
+	}
+	.generalUseSkew a {
+		transform: skewX(30deg);
+		display: block;
+	}
+	.hostageSkew {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		right: 40px;
+		width: 100px;
+		transform: skewX(30deg);
+	}
+	.hostageSkew a {
+		transform: skewX(-30deg);
+		display: block;
+	}
+	.zIndex1 {
+		z-index: 1;
+	}
+	.desktop {
+		display: none;
+	}
+	.phone {
+		display: flex;
+	}
+}
+@media(max-width: 520px) {
+	.objectiveNavMobile li {
+		padding: 5px;
+	}
+	.objectiveNavMobile li a {
+
+	}
+
 }

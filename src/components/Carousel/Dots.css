@@ -20,3 +20,9 @@
 	transition: 0.3s;
 	background: #4F0021;
 }
+
+@media (max-width: 1060px) {
+	.dot {
+		margin-bottom: 5px;
+	}
+}

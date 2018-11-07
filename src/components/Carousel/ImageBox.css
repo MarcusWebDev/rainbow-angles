@@ -4,21 +4,13 @@
 }
 .imageContainer img {
 	margin: 10px;
-	height: 300px;
-	width: 600px;
+	height: auto;
+	width: 95%;
 	cursor: pointer;
 }
 
-@media(max-width: 1200px) {
+@media (max-width: 480px) {
 	.imageContainer img {
-		height: 200px;
-		width: 400px;
-	}
-}
-
-@media(max-width: 950px) {
-	.imageContainer img {
-		height: 150px;
-		width: 300px;
+		margin: 5px;
 	}
 }

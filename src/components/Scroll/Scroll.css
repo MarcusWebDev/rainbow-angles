@@ -21,3 +21,16 @@
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
+@media (max-width: 1060px) {
+	.scroll {
+		margin: 0 25px;
+		height: 400px;
+		max-width: none;
+	}
+}
+@media (max-width: 480px) {
+	.scroll {
+		margin: 0 15px;
+		height: 250px;
+	}
+}
