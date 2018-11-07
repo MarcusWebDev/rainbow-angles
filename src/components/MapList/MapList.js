@@ -5,7 +5,7 @@ import Maps from '../Maps/Maps';
 const MapList = ({routeChange}) => { //passed the routeChange function to here as a prop to change the state based off the the route specified in each onClick
 	return (
 		<div className="mapListContainer">
-			<h1>Welcome to Rainbow Angles!</h1>
+			<h1 className="welcome">Welcome to Rainbow Angles!</h1>
 			<img className="logo" src={require('../../images/logo.png')} />
 			<h3>A site featuring good angles on all competitive maps of Rainbowsix Siege!</h3>
 			<h1>Current Ranked Maps</h1>

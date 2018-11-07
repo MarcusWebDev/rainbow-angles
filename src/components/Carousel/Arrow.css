@@ -25,3 +25,16 @@
 	transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
+@media (max-width: 480px) {
+	.slide-arrow {
+		border-width: 0 8px 8px 0;
+		height: 8px;
+		width: 8px;
+	}
+	.right {
+		right: -8px;
+	}
+	.left {
+		left: -8px;
+	}
+}
