@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/Chalet.d056d3bf.jpg"
   },
   {
-    "revision": "2993af4e6d728f5a69e7",
-    "url": "/static/css/main.745c235f.chunk.css"
+    "revision": "0164d3925f332535581b",
+    "url": "/static/css/main.c97a77cf.chunk.css"
   },
   {
     "revision": "c2908f4a3cc507ec6bb1",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/static/media/logo.1298c79f.png"
   },
   {
-    "revision": "2993af4e6d728f5a69e7",
-    "url": "/static/js/main.2993af4e.chunk.js"
+    "revision": "0164d3925f332535581b",
+    "url": "/static/js/main.0164d392.chunk.js"
   },
   {
     "revision": "771d7dabdfda35d00ec2bf7ff05c90e8",
@@ -68,7 +68,11 @@ self.__precacheManifest = [
     "url": "/static/media/Villa.d3269e61.jpg"
   },
   {
-    "revision": "e9c0c42509112b924e760ea5f9e1fb33",
+    "revision": "39927b65a07b3d609ce879e0840b07d6",
+    "url": "/static/media/biohazardContainer.39927b65.png"
+  },
+  {
+    "revision": "5986c0c98b634cdc067eb5f235d03f8f",
     "url": "/index.html"
   }
 ];
