@@ -7,9 +7,16 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
-
+.logo {
+	width: 350px;
+}
 @media (max-width: 980px) {
 	.mapList {
 		margin: 0;
+	}
+}
+@media (max-width: 480px) {
+	.logo {
+		width: 280px;
 	}
 }

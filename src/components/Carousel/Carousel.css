@@ -33,7 +33,8 @@
 	background: #4F0021;
 }
 .objectiveNavButton {
-	background: #8E003B;
+	background: #8A003B;
+	/*possibly use #7D0035*/
 }
 .objectiveNavButton-active {
 	transition: ease 0.3s;
