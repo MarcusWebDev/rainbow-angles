@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import Arrow from './Arrow';
-import { nextSlide, prevSlide, toObjective, toTargetSlide, lightBoxOn, lightBoxOff } from '../../containers/actions';
+import { nextSlide, prevSlide, toFloor, toTargetSlide, lightBoxOn, lightBoxOff } from '../../containers/actions';
 import Scroll from '../Scroll/Scroll';
+import NavBar from './NavBar';
 import ImageBox from './ImageBox';
 import LightBox from './LightBox';
 import Dots from './Dots';
@@ -20,7 +21,7 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		slideChangeNext: (slideIndex, pictures) => {dispatch(nextSlide(slideIndex, pictures))},
 		slideChangePrev: (slideIndex, pictures) => {dispatch(prevSlide(slideIndex, pictures))},
-		navigateToObjective: (objectiveStart) => {dispatch(toObjective(objectiveStart))},
+		navigateToFloor: (floorStart) => {dispatch(toFloor(floorStart))},
 		navigateToTargetSlide: (targetSlide) => {dispatch(toTargetSlide(targetSlide))},
 		turnOnLightBox: (lightBoxPicture) => {dispatch(lightBoxOn(lightBoxPicture))},
 		turnOffLightBox: () => {dispatch(lightBoxOff())}
@@ -30,44 +31,41 @@ const mapDispatchToProps = (dispatch) => {
 class Carousel extends Component {
 	render () {	
 
-		const { pictures, slideIndex, text, objectiveStart, lightBoxStatus, lightBoxPicture, slideChangeNext, slideChangePrev, navigateToObjective, navigateToTargetSlide, turnOnLightBox, turnOffLightBox } = this.props;
+		const { pictures, slideIndex, text, floorStart, floorNames, lightBoxStatus, lightBoxPicture, slideChangeNext, slideChangePrev, navigateToFloor, navigateToTargetSlide, turnOnLightBox, turnOffLightBox } = this.props;
+		
+		const shortToFull = {
+			'B': 'Basement',
+			'1st': 'First Floor',
+			'2nd': 'Second Floor',
+			'3rd': 'Third Floor',
+			'4th': 'Fourth Floor'
+		}
+		const fullFloorNames = floorNames.map((name) => shortToFull[name] || 'Something\'s wrong with the header');
 
-		let generalUseActivate = 'objectiveNavButton ';
-		let secureAreaActivate = 'objectiveNavButton ';
-		let bombActivate = 'objectiveNavButton ';
-		let hostageActivate = 'objectiveNavButton ';
-		generalUseActivate = slideIndex < objectiveStart[0] ? generalUseActivate += ' objectiveNavButton-active' : generalUseActivate = 'objectiveNavButton ';
-		secureAreaActivate = slideIndex >= objectiveStart[0] && slideIndex < objectiveStart[1] ? secureAreaActivate += ' objectiveNavButton-active ' : secureAreaActivate = 'objectiveNavButton ';
-		bombActivate = slideIndex >= objectiveStart[1] && slideIndex < objectiveStart[2] ? bombActivate += ' objectiveNavButton-active ' : bombActivate = 'objectiveNavButton ';
-		hostageActivate = slideIndex >= objectiveStart[2] ? hostageActivate += ' objectiveNavButton-active ' : hostageActivate = 'objectiveNavButton ';
 		 return (
 		 	<div>
 			 	<h1> 
-					{
-						slideIndex < objectiveStart[0] ? 'General Use' :
-						slideIndex >= objectiveStart[0] && slideIndex < objectiveStart[1] ?'Secure Area' :
-			 	 		slideIndex >= objectiveStart[1] && slideIndex < objectiveStart[2] ? 'Bomb' :
-			 	 		slideIndex >= objectiveStart[2] ? 'Hostage' :
-			 	 		'Something is wrong'
+					{	
+						fullFloorNames.map((name, i) => {
+							if (i === 0) {
+								if (slideIndex < floorStart[0]) {
+									return fullFloorNames[0];
+								}
+							}
+							else if (i === fullFloorNames.length - 1) {
+								if (slideIndex >= floorStart[floorStart.length - 1]) {
+									return fullFloorNames[fullFloorNames.length - 1];
+								}
+							}
+							else {
+								if (slideIndex >= floorStart[i - 1] && slideIndex < floorStart[i]) {
+									return fullFloorNames[i];
+								}
+							}
+						})
 			 	 	}
 			 	</h1>
-			 	<nav className="objectiveNavMobile phone">
-					<li className={`generalUseSkew fullBorder ${generalUseActivate}`} onClick={() => navigateToObjective(0)} >
-						<a>General Use</a>
-					</li>
-					<li className={`zIndex1 fullBorder ${secureAreaActivate}`} onClick={() => navigateToObjective(objectiveStart[0])} >
-						<a className="mobileNavText">Secure Area</a>
-						<img className="mobileNavIcon" src={require('../../images/biohazardContainer.png')} />
-					</li>
-					<li className={`zIndex1 noBorderLeft ${bombActivate}`} onClick={() => navigateToObjective(objectiveStart[1])} >
-						<a className="mobileNavText">Bomb</a>
-						<img className="mobileNavIcon" src={require('../../images/bomb.png')} />
-					</li>
-					<li className={`hostageSkew fullBorder ${hostageActivate}`} onClick={() => navigateToObjective(objectiveStart[2])} >
-						<a className="mobileNavText">Hostage</a>
-						<img className="mobileNavIcon" src={require('../../images/hostage.png')} />
-					</li>
-				</nav>
+			 	<NavBar floorStart={floorStart} slideIndex={slideIndex} floorNames={floorNames} onClick={(floors) => navigateToFloor(floors)}/>
 			 	<div className="anglesContainer">
 					<div className="carouselContainer">
 						<div>
@@ -81,12 +79,9 @@ class Carousel extends Component {
 						<Dots pictures={pictures} index={slideIndex} navigateToTargetSlide={navigateToTargetSlide}/>
 					</div>
 					<div className="textContainer">
-						<nav className="objectiveNav desktop">
-							<li className={`skewedNavButton fullBorder ${generalUseActivate}`} onClick={() => navigateToObjective(0)} ><a>General Use</a></li>
-							<li className={`skewedNavButton noBorderLeft ${secureAreaActivate}`} onClick={() => navigateToObjective(objectiveStart[0])} ><a>Secure Area</a></li>
-							<li className={`skewedNavButton noBorderLeft ${bombActivate}`} onClick={() => navigateToObjective(objectiveStart[1])} ><a>Bomb</a></li>
-							<li className={`unskewedNavButton fullBorder ${hostageActivate}`} onClick={() => navigateToObjective(objectiveStart[2])} ><a>Hostage</a></li>
-						</nav>
+						<div className="desktop">
+							<NavBar floorStart={floorStart} slideIndex={slideIndex} floorNames={floorNames} onClick={(floors) => navigateToFloor(floors)}/>
+						</div>
 						<div className="desktop">
 							<Scroll>
 								<p className="anglesText">{text[slideIndex]}</p>

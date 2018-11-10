@@ -1,4 +1,4 @@
-import { CHANGE_ROUTE, NEXT_SLIDE, PREV_SLIDE, TO_OBJECTIVE, TO_TARGET_SLIDE, TURN_ON_LIGHT_BOX, TURN_OFF_LIGHT_BOX } from './constants';
+import { CHANGE_ROUTE, NEXT_SLIDE, PREV_SLIDE, TO_FLOOR, TO_TARGET_SLIDE, TURN_ON_LIGHT_BOX, TURN_OFF_LIGHT_BOX } from './constants';
 
 const initialStateRoute = {
 	route: 'mapList'
@@ -36,9 +36,9 @@ export const controlCarousel = (state=initialStateCarousel, action={}) => {
 				slideIndex: index
 			})
 		}
-		case TO_OBJECTIVE: {
+		case TO_FLOOR: {
 			return Object.assign({}, state, { 
-				slideIndex: action.objectiveStart
+				slideIndex: action.floorStart
 			})
 		}
 		case TO_TARGET_SLIDE: {

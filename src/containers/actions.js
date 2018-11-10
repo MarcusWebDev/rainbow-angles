@@ -1,4 +1,4 @@
-import { CHANGE_ROUTE, NEXT_SLIDE, PREV_SLIDE, TO_OBJECTIVE, TO_TARGET_SLIDE, TURN_ON_LIGHT_BOX, TURN_OFF_LIGHT_BOX } from './constants';
+import { CHANGE_ROUTE, NEXT_SLIDE, PREV_SLIDE, TO_FLOOR, TO_TARGET_SLIDE, TURN_ON_LIGHT_BOX, TURN_OFF_LIGHT_BOX } from './constants';
 
 
 
@@ -18,9 +18,9 @@ export const prevSlide = (slideIndex, pictures) => ({
 	slideIndex: slideIndex,
 	slides: pictures
 })
-export const toObjective = (objectiveStart) => ({
-	type: TO_OBJECTIVE,
-	objectiveStart: objectiveStart
+export const toFloor = (floorStart) => ({
+	type: TO_FLOOR,
+	floorStart: floorStart
 })
 
 export const toTargetSlide = (targetSlide) => ({

@@ -1,3 +1,4 @@
+
 .carouselContainer {
 	display: flex;
 	flex-direction: column;
@@ -16,72 +17,6 @@
 .textContainer {
 	position: relative;
 }
-.objectiveNav {
-	position: absolute;
-	right: 25px;
-	top: -33px;
-	display: flex;
-	flex-direction: row;
-}
-.objectiveNav li {
-	cursor: pointer;
-	list-style-type: none;
-	padding: 10px;
-}
-.objectiveNav li:hover {
-	transition: ease 0.3s;
-	background: #4F0021;
-}
-.objectiveNavButton {
-	background: #8A003B;
-	/*possibly use #7D0035*/
-}
-.objectiveNavButton-active {
-	transition: ease 0.3s;
-	background: #4F0021;
-}
-.objectiveNavMobile {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	list-style-type: none;
-}
-.objectiveNavMobile li {
-	cursor: pointer;
-	padding: 10px;
-}
-.objectiveNavMobile li:hover {
-	transition: ease 0.3s;
-	background: #4F0021;	
-}
-.fullBorder {
-	border: 2px solid black;
-}
-.noBorderLeft {
-	border: 2px solid black;
-	border-left: none;
-}
-.skewedNavButton {
-	position: relative;
-	z-index: 2;
-	right: 82px;
-	transform: skewX(-30deg);
-}
-.skewedNavButton a {
-	transform: skewX(30deg); 
-	display: block;
-}
-.unskewedNavButton {
-	position: absolute;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	right: 0;
-	width: 80px;
-}
-.mobileNavIcon {
-	display: none;
-}
 .desktop {
 	display: flex;
 }
@@ -96,35 +31,6 @@
 	.anglesText {
 		margin: 0px 20px;
 	}
-	.generalUseSkew {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		left: 40px;
-		transform: skewX(-30deg);
-		width: 120px;
-	}
-	.generalUseSkew a {
-		transform: skewX(30deg);
-		display: block;
-	}
-	.hostageSkew {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-end;
-		right: 40px;
-		width: 100px;
-		transform: skewX(30deg);
-	}
-	.hostageSkew a {
-		transform: skewX(-30deg);
-		display: block;
-	}
-	.zIndex1 {
-		z-index: 1;
-	}
 	.desktop {
 		display: none;
 	}
@@ -132,28 +38,3 @@
 		display: flex;
 	}
 }
-@media(max-width: 520px) {
-	.objectiveNavMobile li {
-		padding: 5px;
-	}
-}
-@media (max-width: 480px) {
-	.mobileNavIcon {
-		display: block;
-		height: 35px;
-	}
-	.mobileNavText {
-		display: none;
-	}
-	.hostageSkew {
-		right: 50px;
-	}
-	.hostageSkew a {
-		display: none;
-	}
-	.hostageSkew img {
-		transform: skew(-30deg);
-		padding-right: 8px;
-	}
-}
-/*hello?*/

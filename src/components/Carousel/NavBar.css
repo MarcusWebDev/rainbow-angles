@@ -1,0 +1,105 @@
+.floorNav {
+	position: absolute;
+	right: 25px;
+	top: -33px;
+	display: flex;
+	flex-direction: row;
+}
+.floorNav li {
+	cursor: pointer;
+	list-style-type: none;
+	padding: 10px 20px;
+}
+.floorNav li:hover {
+	transition: ease 0.3s;
+	background: #4F0021;
+}
+.fullBorder {
+	border: 2px solid black;
+}
+.noBorderLeft {
+	border: 2px solid black;
+	border-left: none;
+}
+.desktopSkewedNavButton {
+	position: relative;
+	z-index: 2;
+	right: 70px;
+	transform: skewX(-30deg);
+}
+.desktopSkewedNavButton a {
+	transform: skewX(30deg); 
+	display: block;
+}
+.desktopUnskewedNavButton {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	right: 0;
+	width: 50px;
+}
+.floorNavButton {
+	background: #8A003B;
+	/*possibly use #7D0035*/
+}
+.floorNavButton-active {
+	transition: ease 0.3s;
+	background: #4F0021;
+}
+.floorNavMobile {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	list-style-type: none;
+}
+.floorNavMobile li {
+	cursor: pointer;
+	padding: 10px 20px;
+}
+.floorNavMobile li:hover {
+	transition: ease 0.3s;
+	background: #4F0021;	
+}
+@media (max-width: 1060px) {
+	.bottomFloorSkew {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		left: 20px;
+		transform: skewX(-30deg);
+		width: 40px;
+	}
+	.bottomFloorSkew a {
+		transform: skewX(30deg);
+		display: block;
+	}
+	.topFloorSkew {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		right: 20px;
+		width: 40px;
+		transform: skewX(30deg);
+	}
+	.topFloorSkew a {
+		transform: skewX(-30deg);
+		display: block;
+	}
+	.zIndex1 {
+		z-index: 1;
+	}
+	.desktop {
+		display: none;
+	}
+	.phone {
+		display: flex;
+	}
+}
+@media(max-width: 480px) {
+	.floorNavMobile li {
+		padding: 5px 10px;
+	}
+}

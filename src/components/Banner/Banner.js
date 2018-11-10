@@ -1,7 +1,7 @@
 import React from 'react';
-import './NavBar.css';
+import './Banner.css';
 
-const NavBar = ({routeChange}) => {
+const Banner = ({routeChange}) => {
 	return (
 		<div className="navBarContainer" onClick={() => routeChange('mapList')}>
 			<img src={require('../../images/logo.png')} />
@@ -10,4 +10,4 @@ const NavBar = ({routeChange}) => {
 	);
 }
 
-export default NavBar;
+export default Banner;
