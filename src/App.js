@@ -55,7 +55,7 @@ class App extends Component {
             floorStart={[4]}
             pictures={[
               [require('./images/border/1st1_1.png'), require('./images/border/1st1_2.png'), require('./images/border/1st1_3.png')],
-              [require('./images/border/1st2_1.png'),require('./images/border/1st2_2png')],
+              [require('./images/border/1st2_1.png'),require('./images/border/1st2_2.png')],
               [require('./images/border/1st3_1.png'), require('./images/border/1st3_2.png')],
               [require('./images/border/1st4_1.png'), require('./images/border/1st4_2.png')],
               [require('./images/border/2nd1_1.png'), require('./images/border/2nd1_2.png')],
