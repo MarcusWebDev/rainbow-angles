@@ -54,13 +54,13 @@ class App extends Component {
             floorNames={['1st', '2nd']}
             floorStart={[4]}
             pictures={[
-              [require('./images/border/1st1_1.png')],
-              [require('./images/border/1st2_1.png')],
-              [require('./images/border/1st3_1.png')],
-              [require('./images/border/1st4_1.png')],
-              [require('./images/border/2nd1_1.png')],
-              [require('./images/border/2nd2_1.png')],
-              [require('./images/border/2nd3_1.png')]
+              [require('./images/border/1st1_1.png'), require('./images/border/1st1_2.png'), require('./images/border/1st1_3.png')],
+              [require('./images/border/1st2_1.png'),require('./images/border/1st2_2png')],
+              [require('./images/border/1st3_1.png'), require('./images/border/1st3_2.png')],
+              [require('./images/border/1st4_1.png'), require('./images/border/1st4_2.png')],
+              [require('./images/border/2nd1_1.png'), require('./images/border/2nd1_2.png')],
+              [require('./images/border/2nd2_1.png'), require('./images/border/2nd2_2.png')],
+              [require('./images/border/2nd3_1.png'), require('./images/border/2nd3_2.png')]
             ]}
             text={['']}
           />
@@ -71,15 +71,15 @@ class App extends Component {
             floorNames={['B', '1st', '2nd']}
             floorStart={[3,6]}
             pictures={[
-              [require('./images/chalet/B1_1.png')],
-              [require('./images/chalet/B2_1.png')],
-              [require('./images/chalet/B3_1.png')],
-              [require('./images/chalet/1st1_1.png')],
-              [require('./images/chalet/1st2_1.png')],
-              [require('./images/chalet/1st3_1.png')],
-              [require('./images/chalet/2nd1_1.png')],
-              [require('./images/chalet/2nd2_1.png')],
-              [require('./images/chalet/2nd3_1.png')]
+              [require('./images/chalet/B1_1.png'), require('./images/chalet/B1_2.png')],
+              [require('./images/chalet/B2_1.png'), require('./images/chalet/B2_2.png')],
+              [require('./images/chalet/B3_1.png'), require('./images/chalet/B3_2.png')],
+              [require('./images/chalet/1st1_1.png'), require('./images/chalet/1st1_2.png')],
+              [require('./images/chalet/1st2_1.png'), require('./images/chalet/1st2_2.png')],
+              [require('./images/chalet/1st3_1.png'), require('./images/chalet/1st3_2.png')],
+              [require('./images/chalet/2nd1_1.png'), require('./images/chalet/2nd1_2.png')],
+              [require('./images/chalet/2nd2_1.png'), require('./images/chalet/2nd2_2.png')],
+              [require('./images/chalet/2nd3_1.png'), require('./images/chalet/2nd3_2.png')]
             ]}
             text={['']}
           />
@@ -90,16 +90,16 @@ class App extends Component {
             floorNames={['B', '1st', '2nd']}
             floorStart={[3,7]}
             pictures={[
-              [require('./images/clubHouse/B1_1.png')],
-              [require('./images/clubHouse/B2_1.png')],
-              [require('./images/clubHouse/B3_1.png')],
-              [require('./images/clubHouse/1st1_1.png')],
-              [require('./images/clubHouse/1st2_1.png')],
-              [require('./images/clubHouse/1st3_1.png')],
-              [require('./images/clubHouse/1st4_1.png')],
-              [require('./images/clubHouse/2nd1_1.png')],
-              [require('./images/clubHouse/2nd2_1.png')],
-              [require('./images/clubHouse/2nd3_1.png')]
+              [require('./images/clubHouse/B1_1.png'), require('./images/clubHouse/B1_2.png')],
+              [require('./images/clubHouse/B2_1.png'), require('./images/clubHouse/B2_2.png')],
+              [require('./images/clubHouse/B3_1.png'), require('./images/clubHouse/B3_2.png')],
+              [require('./images/clubHouse/1st1_1.png'), require('./images/clubHouse/1st1_2.png')],
+              [require('./images/clubHouse/1st2_1.png'), require('./images/clubHouse/1st2_2.png')],
+              [require('./images/clubHouse/1st3_1.png'), require('./images/clubHouse/1st3_2.png')],
+              [require('./images/clubHouse/1st4_1.png'), require('./images/clubHouse/1st4_2.png')],
+              [require('./images/clubHouse/2nd1_1.png'), require('./images/clubHouse/2nd1_2.png')],
+              [require('./images/clubHouse/2nd2_1.png'), require('./images/clubHouse/2nd2_2.png')],
+              [require('./images/clubHouse/2nd3_1.png'), require('./images/clubHouse/2nd3_2.png')]
             ]}
             text={['']}
           />
@@ -110,12 +110,12 @@ class App extends Component {
             floorNames={['1st', '2nd']}
             floorStart={[3]}
             pictures={[
-              [require('./images/coastline/1st1_1.png')],
-              [require('./images/coastline/1st2_1.png')],
-              [require('./images/coastline/1st3_1.png')],
-              [require('./images/coastline/2nd1_1.png')],
-              [require('./images/coastline/2nd2_1.png')],
-              [require('./images/coastline/2nd3_1.png')]
+              [require('./images/coastline/1st1_1.png'), require('./images/coastline/1st1_2.png')],
+              [require('./images/coastline/1st2_1.png'), require('./images/coastline/1st2_2.png')],
+              [require('./images/coastline/1st3_1.png'), require('./images/coastline/1st3_2.png')],
+              [require('./images/coastline/2nd1_1.png'), require('./images/coastline/2nd1_2.png')],
+              [require('./images/coastline/2nd2_1.png'), require('./images/coastline/2nd2_2.png')],
+              [require('./images/coastline/2nd3_1.png'), require('./images/coastline/2nd3_2.png')]
             ]}
             text={['']}
           />
@@ -126,15 +126,15 @@ class App extends Component {
             floorNames={['B', '1st', '2nd']}
             floorStart={[4,6]}
             pictures={[
-              [require('./images/consulate/B1_1.png')],
-              [require('./images/consulate/B2_1.png')],
-              [require('./images/consulate/B3_1.png')],
-              [require('./images/consulate/B4_1.png')],
-              [require('./images/consulate/1st1_1.png')],
-              [require('./images/consulate/1st2_1.png')],
-              [require('./images/consulate/2nd1_1.png')],
-              [require('./images/consulate/2nd2_1.png')],
-              [require('./images/consulate/2nd3_1.png')]
+              [require('./images/consulate/B1_1.png'), require('./images/consulate/B1_2.png')],
+              [require('./images/consulate/B2_1.png'), require('./images/consulate/B2_2.png')],
+              [require('./images/consulate/B3_1.png'), require('./images/consulate/B3_2.png')],
+              [require('./images/consulate/B4_1.png'), require('./images/consulate/B4_2.png')],
+              [require('./images/consulate/1st1_1.png'), require('./images/consulate/1st1_2.png')],
+              [require('./images/consulate/1st2_1.png'), require('./images/consulate/1st2_2.png')],
+              [require('./images/consulate/2nd1_1.png'), require('./images/consulate/2nd1_2.png')],
+              [require('./images/consulate/2nd2_1.png'), require('./images/consulate/2nd2_2.png')],
+              [require('./images/consulate/2nd3_1.png'), require('./images/consulate/2nd3_2.png')]
             ]}
             text={['']}
           />
@@ -143,14 +143,14 @@ class App extends Component {
             header={'HEREFORD'}
             headerPicture={require('./images/Hereford.jpg')}
             floorNames={['B', '1st', '2nd', '3rd']}
-            floorStart={[3,5,6]}
+            floorStart={[2,4,5]}
             pictures={[
-              [require('./images/hereford/B1_1.png')],
-              [require('./images/hereford/B2_1.png')],
-              [require('./images/hereford/1st1_1.png')],
-              [require('./images/hereford/1st2_1.png')],
-              [require('./images/hereford/2nd1_1.png')],
-              [require('./images/hereford/3rd1_1.png')],
+              [require('./images/hereford/B1_1.png'), require('./images/hereford/B1_2.png')],
+              [require('./images/hereford/B2_1.png'), require('./images/hereford/B2_2.png')],
+              [require('./images/hereford/1st1_1.png'), require('./images/hereford/1st1_2.png')],
+              [require('./images/hereford/1st2_1.png'), require('./images/hereford/1st2_2.png')],
+              [require('./images/hereford/2nd1_1.png'), require('./images/hereford/2nd1_2.png')],
+              [require('./images/hereford/3rd1_1.png'), require('./images/hereford/3rd1_2.png')],
             ]}
             text={['']}
           />
