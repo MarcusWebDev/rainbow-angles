@@ -18,7 +18,13 @@
 	margin: 15px auto;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 .lightBoxPicture {
-	width: 100vw;
+	width: 90vw;
+}
+@media(max-width: 480px) {
+	.lightBoxPicture {
+		width: 100vw;
+	}
 }

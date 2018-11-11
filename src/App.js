@@ -110,12 +110,12 @@ class App extends Component {
             floorNames={['1st', '2nd']}
             floorStart={[3]}
             pictures={[
-              [require('./images/clubHouse/1st1_1.png')],
-              [require('./images/clubHouse/1st2_1.png')],
-              [require('./images/clubHouse/1st3_1.png')],
-              [require('./images/clubHouse/2nd1_1.png')],
-              [require('./images/clubHouse/2nd2_1.png')],
-              [require('./images/clubHouse/2nd3_1.png')]
+              [require('./images/coastline/1st1_1.png')],
+              [require('./images/coastline/1st2_1.png')],
+              [require('./images/coastline/1st3_1.png')],
+              [require('./images/coastline/2nd1_1.png')],
+              [require('./images/coastline/2nd2_1.png')],
+              [require('./images/coastline/2nd3_1.png')]
             ]}
             text={['']}
           />
