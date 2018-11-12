@@ -225,7 +225,7 @@ class App extends Component {
             floorNames={['B', '1st', '2nd']}
             floorStart={[1,3]}
             pictures={[
-              [require('./images/villa/B1_1.png'), require('./images/villa/B1_2.png'),
+              [require('./images/villa/B1_1.png'), require('./images/villa/B1_2.png')],
               [require('./images/villa/1st1_1.png'), require('./images/villa/1st1_2.png')],
               [require('./images/villa/1st2_1.png'), require('./images/villa/1st2_2.png')],
               [require('./images/villa/2nd1_1.png'), require('./images/villa/2nd1_2.png')],
