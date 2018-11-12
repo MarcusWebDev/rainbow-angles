@@ -190,12 +190,13 @@ class App extends Component {
             header={'SKYSCRAPER'}
             headerPicture={require('./images/Skyscraper.jpg')}
             floorNames={['1st', '2nd']}
-            floorStart={[4]}
+            floorStart={[5]}
             pictures={[
               [require('./images/skyscraper/1st1_1.png'), require('./images/skyscraper/1st1_2.png')],
               [require('./images/skyscraper/1st2_1.png'), require('./images/skyscraper/1st2_2.png')],
               [require('./images/skyscraper/1st3_1.png'), require('./images/skyscraper/1st3_2.png')],
               [require('./images/skyscraper/1st4_1.png'), require('./images/skyscraper/1st4_2.png')],
+              [require('./images/skyscraper/1st5_1.png'), require('./images/skyscraper/1st5_2.png')],
               [require('./images/skyscraper/2nd1_1.png'), require('./images/skyscraper/2nd1_2.png')],
             ]}
             text={['']}
