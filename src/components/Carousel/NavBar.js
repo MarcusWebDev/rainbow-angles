@@ -32,7 +32,7 @@ const NavBar = ({floorStart, slideIndex, floorNames, onClick}) => {
 
 	const mobileNav = floorNames.map((button, i) => {
 		const skew = i === 0 ? 'bottomFloorSkew' : i === floorNames.length - 1 ? 'topFloorSkew' : '';
-		const mobileBorder = floorNames.length === 3 ? 'fullBorder' : i === floorNames.length - 2 ? ' noBorderLeft' : ' fullBorder';
+		const mobileBorder = "fullBorder"; /*floorNames.length === 3 ? 'fullBorder' : i === floorNames.length - 2 ? ' noBorderLeft' : ' fullBorder'; */
 		const navigateToSection = i === 0 ? 0 : floorStart[i - 1];
 		const zIndex = i === 0 || i === floorNames.length - 1 ? '' : 'zIndex1';
 		activate(i); //each button reads it's index in the activateArray array and activates or deactivates based on that index's value.

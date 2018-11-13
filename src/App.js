@@ -4,25 +4,27 @@ import './App.css';
 import Banner from './components/Banner/Banner';
 import MapList from './components/MapList/MapList';
 import MapGuide from './components/MapGuide/MapGuide';
-import { changeRoute } from './containers/actions';
+import { changeRoute, toTargetSlide } from './containers/actions';
 
 const mapStateToProps = (state) => {
   return {
+    slideIndex: state.controlCarousel.slideIndex,
     route: state.setRoute.route,
   }
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    onRouteChange: (event) => {dispatch(changeRoute(event))}
+    onRouteChange: (event) => {dispatch(changeRoute(event))},
+    navigateToTargetSlide: (targetSlide) => {dispatch(toTargetSlide(targetSlide))}
   }
 }
 
 class App extends Component {
   render() {
-    const { route, onRouteChange } = this.props
+    const { route, onRouteChange, navigateToTargetSlide } = this.props
     return (
       <div className="App">
-        <Banner routeChange={onRouteChange} />
+        <Banner routeChange={onRouteChange} resetCarousels={navigateToTargetSlide}/>
         <div className="contentContainer">
         {route === 'mapList'
           ?
