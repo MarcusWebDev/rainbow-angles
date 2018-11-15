@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "siegeLike";
+  src: url("./fonts/ScoutCond-Light.otf");
+
+}
+
 body {
   background: repeating-linear-gradient(
   45deg,
@@ -9,19 +15,29 @@ body {
   color: white;
   text-align: center;
 }
+p {
+  font-family: "siegeLike";
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+h1 {
+  font-family: "siegeLike";
+  letter-spacing: 5px;
+  font-size: 60px;
+}
 .contentContainer {
-  margin: 83px auto 0;
+  margin: 72px auto 0;
   width: 90%;
   background: #0D0C13;
 }
-@media (max-width: 740px) {
+@media (max-width: 800px) {
   .contentContainer {
-    margin: 60px auto 0;
+    margin: 54px auto 0;
   }
 }
 @media (max-width: 580px) {
   .contentContainer {
-    margin: 40px auto 0;
+    margin: 36px auto 0;
   }
 }
 @media (max-width: 480px) {
@@ -29,6 +45,10 @@ body {
     width: 95%;
   }
   p {
-    font-size: 13px;
+    font-size: 23px;
+
+  }
+  h1 {
+    font-size: 40px;
   }
 }

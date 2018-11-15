@@ -1,26 +1,35 @@
 .map {
-	margin: 20px;
+	margin: 30px;
 	position: relative;
 	height: 150px;
 	width: 300px;
-	border: 2px solid #8F003D;
+	border: 3px solid #8F003D;
+	transition: 0.5s;
+}
+.map:hover {
+	transition: 0.5s;
+	border: 5px solid #4F0021;
+	height: 163px;
+	width: 325px;
 }
 .map img {
 	height: 100%;
 	width: 100%;
 	cursor: pointer;
+
 }
 .map p {
 	position: absolute;
 	margin: 0;
 	bottom: 0;
-	font-size: 20px;
+	font-size: 27px;
 	left: 50%;
 	width: 100%;
 	transform: translateX(-50%) translateY(-50%);
 	text-align: center;
 	background: rgba(0,0,0,0.7);
 	cursor: pointer;
+
 }
 
 @media (max-width: 980px) {

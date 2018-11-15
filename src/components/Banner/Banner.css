@@ -1,4 +1,4 @@
-.navBarContainer {
+.bannerContainer {
 	z-index: 10;
 	display: flex;
 	flex-direction: row;
@@ -8,30 +8,38 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: #4C0020;
-	box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+	background: #4b001e;
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
 	cursor: pointer;
 }
-.navBarContainer p {
+.bannerContainer p {
 	margin: 0;
 	font-size: 60px;
+	letter-spacing: 30px;
 }
-.navBarContainer img {
+.bannerContainer img {
 	width: 100px;
 }
-@media (max-width: 740px) {
-	.navBarContainer p {
+@media (max-width: 800px) {
+	.bannerContainer p {
 		font-size: 45px;
+		letter-spacing: 20px;
 	}
-	.navBarContainer img {
+	.bannerContainer img {
 		width: 70px;
 	}
 }
 @media (max-width: 580px) {
-	.navBarContainer p {
+	.bannerContainer p {
 		font-size: 30px;
+		letter-spacing: 15px;
 	}
-	.navBarContainer img {
+	.bannerContainer img {
 		width: 50px;
+	}
+}
+@media (max-width: 380px) {
+	.bannerContainer p {
+		letter-spacing: 10px;
 	}
 }

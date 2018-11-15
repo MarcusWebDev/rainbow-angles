@@ -1,12 +1,15 @@
 .mapListContainer h1 {
 	border-bottom: 2px solid white; 
 }
+.mapListContainer p {
+	margin: 20px 10%;
+}
 .mapList {
-	margin: 0 10%;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 }
+
 .welcome {
 	padding-top: 30px;
 }

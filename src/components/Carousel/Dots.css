@@ -11,9 +11,10 @@
 	margin: 5px;
 	margin-bottom: 15px;
 	cursor: pointer;
+	transition: 0.5s;
 }
 .dot:hover {
-	transition: 0.3s;
+	transition: 0.5s;
 	background: #4F0021;
 }
 .dot-active {

@@ -13,10 +13,9 @@
 }
 .anglesText {
 	margin: 20px;
+	font-size: 30px;
 }
-.anglesText {
-	font-size: 20px;
-}
+
 .textContainer {
 	position: relative;
 }

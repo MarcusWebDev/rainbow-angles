@@ -6,7 +6,7 @@ const MapGuide = ({headerPicture, header, text, pictures, video, floorStart, flo
 	return (
 		<div>
 			<div className="headerContainer" style={{background: `url(${headerPicture}) center no-repeat`, backgroundSize: 'cover'}}>
-				<h1>{header}</h1>
+				<h1>{header.toUpperCase()}</h1>
 			</div>
 			<Carousel pictures={pictures} text={text} floorStart={floorStart} floorNames={floorNames}/>	
 		</div>

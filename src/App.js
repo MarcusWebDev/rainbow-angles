@@ -32,7 +32,7 @@ class App extends Component {
           : route === 'bank' ?
           <MapGuide 
             header={'BANK'} 
-            headerPicture={require('./images/Bank.jpg')} //Pass these down as props for each route. Code MapGuide so it can accommodate any combination of these props
+            headerPicture={require('./images/Bank.jpg')}
             floorNames={['B', '1st', '2nd']}
             floorStart={[1,4]}
             pictures={[

@@ -162,9 +162,6 @@
 		transition: ease 0.3s;
 		background: #4F0021;
 	}
-	.topFloorSkew a {
-		padding-left: 100px;
-	}
 	.desktop {
 		display: none;
 	}
