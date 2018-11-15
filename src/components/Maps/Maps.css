@@ -16,7 +16,7 @@
 	height: 100%;
 	width: 100%;
 	cursor: pointer;
-
+	user-select: none;
 }
 .map p {
 	position: absolute;
@@ -29,11 +29,20 @@
 	text-align: center;
 	background: rgba(0,0,0,0.7);
 	cursor: pointer;
-
+	user-select: none;
 }
 
 @media (max-width: 980px) {
 	.map {
 		margin: 10px;
+	}
+
+}
+@media (max-width: 1024px) {
+	.map:hover {
+		transition: 0s;
+		height: 150px;
+		width: 300px;
+		border: 3px solid #8F003D;
 	}
 }
