@@ -11,6 +11,7 @@
 	background: #4b001e;
 	box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
 	cursor: pointer;
+	user-select: none;
 }
 .bannerContainer p {
 	margin: 0;
