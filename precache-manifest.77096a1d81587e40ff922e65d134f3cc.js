@@ -4,20 +4,16 @@ self.__precacheManifest = [
     "url": "/static/media/2nd3_1.6d53664a.png"
   },
   {
-    "revision": "02cafa20561114dd30f6",
-    "url": "/static/css/main.2e128895.chunk.css"
+    "revision": "9f09ccd555312b64a6f4",
+    "url": "/static/css/main.4702ce46.chunk.css"
   },
   {
-    "revision": "8c57b862704cd5cffc28",
-    "url": "/static/js/1.8c57b862.chunk.js"
+    "revision": "8668e8b0f17b1ba86939",
+    "url": "/static/js/1.8668e8b0.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
     "url": "/static/js/runtime~main.229c360f.js"
-  },
-  {
-    "revision": "1298c79f7e9fdf739dd65a51d886d27b",
-    "url": "/static/media/logo.1298c79f.png"
   },
   {
     "revision": "f61bfafe38f3d75d592ee7cf03a50ca9",
@@ -66,6 +62,14 @@ self.__precacheManifest = [
   {
     "revision": "c37e69f2372847ea33a2d0e32989787b",
     "url": "/static/media/Villa.c37e69f2.jpg"
+  },
+  {
+    "revision": "e7726be0c0a430f6f1c5c795f7798780",
+    "url": "/static/media/ScoutCond-Light.e7726be0.otf"
+  },
+  {
+    "revision": "1298c79f7e9fdf739dd65a51d886d27b",
+    "url": "/static/media/logo.1298c79f.png"
   },
   {
     "revision": "a5595749e210771116a37942f03943f5",
@@ -408,8 +412,8 @@ self.__precacheManifest = [
     "url": "/static/media/2nd2_2.d42b755e.png"
   },
   {
-    "revision": "02cafa20561114dd30f6",
-    "url": "/static/js/main.02cafa20.chunk.js"
+    "revision": "9f09ccd555312b64a6f4",
+    "url": "/static/js/main.9f09ccd5.chunk.js"
   },
   {
     "revision": "aa8cfcd646b201c6ade233160def345b",
@@ -816,7 +820,7 @@ self.__precacheManifest = [
     "url": "/static/media/2nd3_2.dee06a45.png"
   },
   {
-    "revision": "02e06cce84cf1601e420856aa8f3f0b4",
+    "revision": "5582e98fdba431bb667dfc0ad232693c",
     "url": "/index.html"
   }
 ];
