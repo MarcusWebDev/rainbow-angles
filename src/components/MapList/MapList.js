@@ -8,7 +8,7 @@ const MapList = ({routeChange}) => { //passed the routeChange function to here a
 		<div className="mapListContainer">
 			<h1 className="welcome">Welcome to Rainbow Angles!</h1>
 			<img className="logo" src={require('../../images/logo.png')} />
-			<p>A site featuring angles that you can hold on all competitive maps of Rainbowsix Siege!</p>
+			<p>A site featuring angles that you can hold on all competitive maps of Rainbow Six Siege!</p>
 			<p className="instructions">Click on any ranked map listed below and navigate through a carousel of angles for that map! The first picture in each carousel is the angle itself, and the rest of the pictures provide context for that angle. If you need to come back to the map list, just click on the banner at the top.</p>
 			<h1>Current Ranked Maps</h1>
 			<div className="mapList">
