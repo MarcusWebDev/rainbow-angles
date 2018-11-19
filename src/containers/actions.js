@@ -1,11 +1,4 @@
-import { CHANGE_ROUTE, NEXT_SLIDE, PREV_SLIDE, TO_FLOOR, TO_TARGET_SLIDE, TURN_ON_LIGHT_BOX, TURN_OFF_LIGHT_BOX } from './constants';
-
-
-
-export const changeRoute = (route) => ({
-	type: CHANGE_ROUTE,
-	payload: route
-})
+import { NEXT_SLIDE, PREV_SLIDE, TO_FLOOR, TO_TARGET_SLIDE, TURN_ON_LIGHT_BOX, TURN_OFF_LIGHT_BOX } from './constants';
 
 export const nextSlide = (slideIndex, pictures) => ({
 	type: NEXT_SLIDE,

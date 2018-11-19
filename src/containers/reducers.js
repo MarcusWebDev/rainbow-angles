@@ -1,19 +1,5 @@
 import { CHANGE_ROUTE, NEXT_SLIDE, PREV_SLIDE, TO_FLOOR, TO_TARGET_SLIDE, TURN_ON_LIGHT_BOX, TURN_OFF_LIGHT_BOX } from './constants';
 
-const initialStateRoute = {
-	route: 'mapList'
-}
-
-export const setRoute = (state=initialStateRoute, action={}) => {
-	switch(action.type) {
-		case CHANGE_ROUTE:
-			return Object.assign({}, state, {
-				route: action.payload
-			})
-		default:
-			return state;
-	}
-}
 
 const initialStateCarousel = {
 	slideIndex: 0,

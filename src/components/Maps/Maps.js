@@ -1,9 +1,9 @@
 import React from 'react';
 import './Maps.css';
 
-const Maps = ({onClick, title, picture}) => {
+const Maps = ({title, picture}) => {
 	return (
-		<div onClick={onClick} className="map">
+		<div className="map">
 			<img src={picture} />
 			<p>{title}</p>
 		</div>

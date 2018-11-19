@@ -1,14 +1,14 @@
 import React from 'react';
 import './Banner.css';
+import { Link } from 'react-router-dom';
 
-const Banner = ({routeChange, resetCarousels}) => {
+const Banner = ({resetCarousels}) => {
 	return (
-		<div className="bannerContainer" onClick={() => {
-			routeChange('mapList');
-			resetCarousels(0);
-		}}>
-			<p>RAINBOW ANGLES</p>
-		</div>
+		<Link to="/">
+			<div className="bannerContainer" onClick={() => resetCarousels(0)}>
+				<p>RAINBOW ANGLES</p>
+			</div>
+		</Link>
 	);
 }
 
