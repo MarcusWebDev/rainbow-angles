@@ -7,24 +7,13 @@ import MapList from './components/MapList/MapList';
 import MapGuide from './components/MapGuide/MapGuide';
 import { toTargetSlide } from './containers/actions';
 
-const mapStateToProps = (state) => {
-  return {
-    slideIndex: state.controlCarousel.slideIndex,
-  }
-}
-const mapDispatchToProps = (dispatch) => {
-  return {
-    navigateToTargetSlide: (targetSlide) => {dispatch(toTargetSlide(targetSlide))}
-  }
-}
 
 class App extends Component {
   render() {
-    const { route, onRouteChange, navigateToTargetSlide } = this.props
     return (
       <Router>
         <div className="App">
-          <Banner routeChange={onRouteChange} resetCarousels={navigateToTargetSlide}/>
+          <Banner />
           <div className="contentContainer">
             <Route path="/" exact component={MapList} />
             <Route path="/bank/" render={() => 
@@ -364,4 +353,4 @@ class App extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

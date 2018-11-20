@@ -2,10 +2,10 @@ import React from 'react';
 import './Banner.css';
 import { Link } from 'react-router-dom';
 
-const Banner = ({resetCarousels}) => {
+const Banner = () => {
 	return (
 		<Link to="/">
-			<div className="bannerContainer" onClick={() => resetCarousels(0)}>
+			<div className="bannerContainer">
 				<p>RAINBOW ANGLES</p>
 			</div>
 		</Link>
