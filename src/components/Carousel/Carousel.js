@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import Arrow from './Arrow';
-import { nextSlide, prevSlide, toFloor, toTargetSlide, lightBoxOn, lightBoxOff, imageLoaded, imageLoading, imageError } from '../../containers/actions';
+import { nextSlide, prevSlide, toFloor, toTargetSlide, lightBoxOn, lightBoxOff } from '../../containers/actions';
 import Scroll from '../Scroll/Scroll';
 import NavBar from './NavBar';
 import ImageBox from './ImageBox';
@@ -13,8 +13,7 @@ const mapStateToProps = (state) => {
 	return {
 		slideIndex: state.controlCarousel.slideIndex,
 		lightBoxStatus: state.controlCarousel.lightBoxStatus,
-		lightBoxPicture: state.controlCarousel.lightBoxPicture,
-		imageStatus: state.controlCarousel.imageStatus
+		lightBoxPicture: state.controlCarousel.lightBoxPicture
 	}
 }
 
@@ -25,18 +24,14 @@ const mapDispatchToProps = (dispatch) => {
 		navigateToFloor: (floorStart) => {dispatch(toFloor(floorStart))},
 		navigateToTargetSlide: (targetSlide) => {dispatch(toTargetSlide(targetSlide))},
 		turnOnLightBox: (lightBoxPicture) => {dispatch(lightBoxOn(lightBoxPicture))},
-		turnOffLightBox: () => {dispatch(lightBoxOff())},
-		imageLoaded: () => {dispatch(imageLoaded())},
-		imageLoading: () => {dispatch(imageLoading())},
-		imageError: () => {dispatch(imageError())}
-
+		turnOffLightBox: () => {dispatch(lightBoxOff())}
 	}
 }
 
 class Carousel extends Component {
 	render () {	
 
-		const { pictures, slideIndex, imageStatus, text, floorStart, floorNames, lightBoxStatus, lightBoxPicture, slideChangeNext, slideChangePrev, navigateToFloor, navigateToTargetSlide, turnOnLightBox, turnOffLightBox, imageLoaded, imageLoading, imageError } = this.props;
+		const { pictures, slideIndex, text, floorStart, floorNames, lightBoxStatus, lightBoxPicture, slideChangeNext, slideChangePrev, navigateToFloor, navigateToTargetSlide, turnOnLightBox, turnOffLightBox } = this.props;
 		
 		const shortToFull = {
 			'B': 'Basement',
@@ -74,28 +69,12 @@ class Carousel extends Component {
 			 	<div className="anglesContainer">
 					<div className="carouselContainer">
 						<div>
-							<Arrow 
-								direction="left" 
-								onClick={
-									() => {
-										slideChangePrev(slideIndex, pictures);
-										imageLoading();
-									}
-								} 
-							/>
+							<Arrow direction="left" onClick={() => slideChangePrev(slideIndex, pictures)} />
 							<Scroll>
-								<ImageBox pictures={pictures} index={slideIndex} onClick={(test) => turnOnLightBox(test)} onLoad={() => imageLoaded()} onError={() => imageError()}/>
-								<LightBox picture={lightBoxPicture} status={lightBoxStatus} onClick={() => turnOffLightBox()} />
+								<ImageBox pictures={pictures} index={slideIndex} onClick={(test) => turnOnLightBox(test)}/>
+								<LightBox picture={lightBoxPicture} status={lightBoxStatus} onClick={() => turnOffLightBox()}/>
 							</Scroll>
-							<Arrow 
-								direction="right" 
-								onClick={
-									() => {
-										slideChangeNext(slideIndex, pictures); 
-										imageLoading();
-									}
-								} 
-							/>
+							<Arrow direction="right" onClick={() => slideChangeNext(slideIndex, pictures)} />
 							</div>
 						<Dots pictures={pictures} index={slideIndex} navigateToTargetSlide={navigateToTargetSlide}/>
 					</div>
@@ -105,25 +84,11 @@ class Carousel extends Component {
 						</div>
 						<div className="desktop">
 							<Scroll>
-								<p className="anglesText">
-									{	
-										imageStatus === 'loaded' ? text[slideIndex] : 
-										imageStatus === 'loading' ? 'Loading...' :
-										imageStatus === 'error' ? 'Error loading an image on this slide.' :
-										'Something is wrong with the image status.'
-									}
-								</p>
+								<p className="anglesText">{text[slideIndex]}</p>
 							</Scroll>
 						</div>
 						<div className="anglesText phone">
-							<p>
-								{
-									imageStatus === 'loaded' ? text[slideIndex] : 
-									imageStatus === 'loading' ? 'Loading...' :
-									imageStatus === 'error' ? 'Error loading an image on this slide.' :
-									'Something is wrong with the image status.'
-								}
-							</p>
+							<p>{text[slideIndex]}</p>
 						</div>
 					</div>
 				</div>

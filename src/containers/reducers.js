@@ -1,10 +1,9 @@
-import { CHANGE_ROUTE, NEXT_SLIDE, PREV_SLIDE, TO_FLOOR, TO_TARGET_SLIDE, TURN_ON_LIGHT_BOX, TURN_OFF_LIGHT_BOX, IMAGE_LOADING, IMAGE_LOADED, IMAGE_ERROR } from './constants';
+import { CHANGE_ROUTE, NEXT_SLIDE, PREV_SLIDE, TO_FLOOR, TO_TARGET_SLIDE, TURN_ON_LIGHT_BOX, TURN_OFF_LIGHT_BOX } from './constants';
 
 
 const initialStateCarousel = {
 	slideIndex: 0,
-	lightBoxStatus: 'off',
-	imageStatus: 'loading'
+	lightBoxStatus: 'off'
 }
 
 export const controlCarousel = (state=initialStateCarousel, action={}) => {
@@ -43,21 +42,6 @@ export const controlCarousel = (state=initialStateCarousel, action={}) => {
 		case TURN_OFF_LIGHT_BOX: {
 			return Object.assign({}, state, { 
 				lightBoxStatus: action.status
-			})
-		}
-		case IMAGE_LOADING: {
-			return Object.assign({}, state, {
-				imageStatus: 'loading'
-			})
-		}
-		case IMAGE_LOADED: {
-			return Object.assign({}, state, {
-				imageStatus: 'loaded'
-			})
-		}
-		case IMAGE_ERROR: {
-			return Object.assign({}, state, {
-				imageStatus: 'error'
 			})
 		}
 		default:
