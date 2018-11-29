@@ -4,4 +4,6 @@ export const TO_FLOOR = 'TO_FLOOR';
 export const TO_TARGET_SLIDE = 'TO_TARGET_SLIDE';
 export const TURN_ON_LIGHT_BOX = 'TURN_ON_LIGHT_BOX';
 export const TURN_OFF_LIGHT_BOX = 'TURN_OFF_LIGHT_BOX';
-
+export const IMAGE_LOADED = 'IMAGE_LOADED';
+export const IMAGE_LOADING = 'IMAGE_LOADING';
+export const IMAGE_ERROR = 'IMAGE_ERROR';

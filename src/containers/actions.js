@@ -1,4 +1,4 @@
-import { NEXT_SLIDE, PREV_SLIDE, TO_FLOOR, TO_TARGET_SLIDE, TURN_ON_LIGHT_BOX, TURN_OFF_LIGHT_BOX } from './constants';
+import { NEXT_SLIDE, PREV_SLIDE, TO_FLOOR, TO_TARGET_SLIDE, TURN_ON_LIGHT_BOX, TURN_OFF_LIGHT_BOX, IMAGE_LOADING, IMAGE_LOADED, IMAGE_ERROR } from './constants';
 
 export const nextSlide = (slideIndex, pictures) => ({
 	type: NEXT_SLIDE,
@@ -28,4 +28,16 @@ export const lightBoxOn = (lightBoxPicture) => ({
 export const lightBoxOff = () => ({
 	type: TURN_OFF_LIGHT_BOX,
 	status: 'off'
+})
+export const imageLoading = () => ({
+	type: IMAGE_LOADING,
+	status: 'loading'
+})
+export const imageLoaded = () => ({
+	type: IMAGE_LOADED,
+	status: 'loaded'
+})
+export const imageError =() => ({
+	type: IMAGE_ERROR,
+	status: 'error'
 })
