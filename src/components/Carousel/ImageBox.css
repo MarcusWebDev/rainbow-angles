@@ -30,4 +30,8 @@
 	.imageContainer img {
 		margin: 5px;
 	}
+	.loadingBox {
+		height: 130px;
+		width: 190px;
+	}
 }
