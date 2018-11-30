@@ -69,12 +69,32 @@ class Carousel extends Component {
 			 	<div className="anglesContainer">
 					<div className="carouselContainer">
 						<div>
-							<Arrow direction="left" onClick={() => slideChangePrev(slideIndex, pictures)} />
+							<Arrow 
+								direction="left" 
+								onClick={
+										() => {
+											slideChangePrev(slideIndex, pictures); 
+											for (let j = 0; j < document.getElementsByClassName('imageID').length; j++) {
+												document.getElementsByClassName('imageID')[j].setAttribute("style", "display: none;"); 
+												document.getElementsByClassName('boxID')[j].setAttribute("style", "display: flex;");
+											}
+										}
+									} />
 							<Scroll>
 								<ImageBox pictures={pictures} index={slideIndex} onClick={(test) => turnOnLightBox(test)}/>
 								<LightBox picture={lightBoxPicture} status={lightBoxStatus} onClick={() => turnOffLightBox()}/>
 							</Scroll>
-							<Arrow direction="right" onClick={() => slideChangeNext(slideIndex, pictures)} />
+							<Arrow 
+							direction="right" 
+							onClick={
+								() => {
+									slideChangeNext(slideIndex, pictures);
+									for (let j = 0; j < document.getElementsByClassName('imageID').length; j++) {
+										document.getElementsByClassName('imageID')[j].setAttribute("style", "display: none;"); 
+										document.getElementsByClassName('boxID')[j].setAttribute("style", "display: flex;");
+									}
+								}
+							} />
 							</div>
 						<Dots pictures={pictures} index={slideIndex} navigateToTargetSlide={navigateToTargetSlide}/>
 					</div>

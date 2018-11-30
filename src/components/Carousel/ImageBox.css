@@ -1,7 +1,9 @@
 .imageContainer {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
+
 .imageContainer img {
 	margin: 10px;
 	height: auto;
@@ -10,8 +12,8 @@
 }
 .loadingBox {
 	margin: 10px;
-	height: 300px;
-	width: 250px;
+	height: 200px;
+	width: 400px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
