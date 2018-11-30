@@ -8,7 +8,22 @@
 	width: 95%;
 	cursor: pointer;
 }
-
+.loadingBox {
+	margin: 10px;
+	height: 300px;
+	width: 250px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: #110E1A;
+	animation: pulse 2.5s infinite;
+}
+@keyframes pulse {
+	0% {background: #110E1A;}
+	50% {background: #000000;}
+	100% {background: #110E1A;}
+}
 @media (max-width: 480px) {
 	.imageContainer img {
 		margin: 5px;

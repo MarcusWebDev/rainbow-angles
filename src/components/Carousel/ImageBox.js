@@ -3,9 +3,15 @@ import LightBox from './LightBox';
 import './ImageBox.css';
 
 const ImageBox = ({pictures, index, onClick}) => {
+
 	const imageArray = pictures[index].map((picture, i) => {
 		return (
-			<img key={i} src={pictures[index][i]} onClick={() => onClick(pictures[index][i])} />
+			<div>
+				<div className={`loadingBox boxID`}>
+					<p>Loading...</p>
+				</div>
+				<img className="imageID" key={i} src={pictures[index][i]} onClick={() => onClick(pictures[index][i])} style={{display: "none"}} onLoad={() => {document.getElementsByClassName('imageID')[i].setAttribute("style", "display: block;"); document.getElementsByClassName('boxID')[i].setAttribute("style", "display: none;"); }} />
+			</div>
 		);
 	})
 
