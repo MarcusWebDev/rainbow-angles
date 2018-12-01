@@ -12,8 +12,8 @@
 }
 .loadingBox {
 	margin: 10px;
-	height: 200px;
-	width: 400px;
+	height: 20vh;
+	width: 30vw;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -26,12 +26,14 @@
 	50% {background: #000000;}
 	100% {background: #110E1A;}
 }
+@media (max-width: 1060px) {
+	.loadingBox {
+		height: 30vh;
+		width: 65vw;
+	}
+}
 @media (max-width: 480px) {
 	.imageContainer img {
 		margin: 5px;
-	}
-	.loadingBox {
-		height: 130px;
-		width: 190px;
 	}
 }
