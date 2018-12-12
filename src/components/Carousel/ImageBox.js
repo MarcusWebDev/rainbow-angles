@@ -10,7 +10,19 @@ const ImageBox = ({pictures, index, onClick}) => {
 				<div className={`loadingBox boxID`}>
 					<p>Loading...</p>
 				</div>
-				<img className="imageID" key={i} src={pictures[index][i]} onClick={() => onClick(pictures[index][i])} style={{display: "none"}} onLoad={() => {document.getElementsByClassName('imageID')[i].setAttribute("style", "display: block;"); document.getElementsByClassName('boxID')[i].setAttribute("style", "display: none;"); }} />
+				<img 
+					className="imageID" 
+					key={i} 
+					src={pictures[index][i]} 
+					onClick={() => onClick(pictures[index][i])} 
+					style={{display: "none"}} 
+					onLoad={
+						() => {
+							document.getElementsByClassName('imageID')[i].setAttribute("style", "display: block;"); 
+							document.getElementsByClassName('boxID')[i].setAttribute("style", "display: none;"); 
+						}
+					} 
+				/>
 			</div>
 		);
 	})
