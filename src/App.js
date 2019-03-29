@@ -3,11 +3,10 @@ import { connect } from 'react-redux';
 import './App.css';
 import {HashRouter as Router, Route, Link } from 'react-router-dom';
 import Banner from './components/Banner/Banner';
-import MapList from './components/MapList/MapList';
+import Homepage from './components/Homepage/Homepage';
 import MapGuide from './components/MapGuide/MapGuide';
 import { toTargetSlide } from './containers/actions';
 
-//is this on master or newHomepage branch?
 
 
 class App extends Component {
@@ -17,7 +16,7 @@ class App extends Component {
         <div className="App">
           <Banner />
           <div className="contentContainer">
-            <Route path="/" exact component={MapList} />
+            <Route path="/" exact component={Homepage} />
             <Route path="/bank/" render={() => 
               <MapGuide 
                 header={'BANK'} 

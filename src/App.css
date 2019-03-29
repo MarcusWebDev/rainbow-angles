@@ -5,16 +5,10 @@
 }
 
 body {
-  background: repeating-linear-gradient(
-  45deg,
-  #262626,
-  #262626 80px,
-  #0D0C13 80px,
-  #0D0C13 160px
-);
   color: white;
   text-align: center;
 }
+
 p {
   font-family: "siegeLike";
   font-size: 30px;
@@ -25,9 +19,14 @@ h1 {
   letter-spacing: 5px;
   font-size: 60px;
 }
+h2 {
+  font-family: "siegeLike";
+  letter-spacing: 5px;
+  font-size: 40px;
+}
 .contentContainer {
   margin: 72px auto 0;
-  width: 90%;
+  width: 100%;
   background: #0D0C13;
 }
 @media (max-width: 800px) {
