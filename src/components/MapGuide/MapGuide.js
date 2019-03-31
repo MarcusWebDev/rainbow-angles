@@ -43,7 +43,6 @@ class MapGuide extends Component {
 
 	render () {
 		const { slideIndex, navigateToTargetSlide, headerPicture, header, text, pictures, video, floorStart, floorNames } = this.props;
-		console.log(slideIndex);
 
 		return (
 			<div>

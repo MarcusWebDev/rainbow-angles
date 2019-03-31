@@ -8,14 +8,21 @@ const Homepage = () => {
 	return (
 		<div className="homepageContainer">
 			<div className="webmContainer">
-				<h1>GAIN THE EDGE ON YOUR OPPONENTS</h1>
+				<video className="bgVideo" preload="true"autoPlay playsinline  muted loop data-flashblockwhitelisted="true" poster="https://ubistatic2-a.akamaihd.net/gamesites/rainbow6/headers/r6-header-burnthorizon.jpg">
+					<source type="video/webm" src="https://ubistatic2-a.akamaihd.net/gamesites/rainbow6/headers/r6-header-burnthorizon.webm"/>
+					<source type="video/mp4" src="https://ubistatic2-a.akamaihd.net/gamesites/rainbow6/headers/r6-header-burnthorizon.mp4"/>
+					
+				</video>
+				<h1 className="videoText">GAIN THE EDGE ON YOUR OPPONENTS</h1>
 			</div>
 			<div className="about">
 				<div className="aboutText">
 					<h2>ABOUT</h2>
 					<p>Rainbow Angles is a website designed to feature angles you can create and hold to watch over vital parts of the maps and catch your opponents off guard.</p>
 				</div>
-				<img className="operator" src="https://ubistatic19-a.akamaihd.net/resource/en-us/game/rainbow6/siege-v3/r6-operator-kapkan_229908.png"/>
+				<div className="operatorPictureContainer">
+					<img className="operator" src="https://ubistatic19-a.akamaihd.net/resource/en-us/game/rainbow6/siege-v3/r6-operator-kapkan_229908.png"/>
+				</div>
 			</div>
 			<div className="mapListContainer">
 				<h1>Current Ranked Maps</h1>
