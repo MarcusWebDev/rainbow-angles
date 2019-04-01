@@ -43,8 +43,8 @@ class Carousel extends Component {
 		const fullFloorNames = floorNames.map((name) => shortToFull[name] || 'Something\'s wrong with the header');
 
 		 return (
-		 	<div>
-			 	<h1> 
+		 	<div className="anglesContentContainer">
+			 	<h1 className="anglesHeader"> 
 					{	
 						fullFloorNames.map((name, i) => {
 							if (i === 0) {

@@ -3,8 +3,8 @@ import './Arrow.css';
 
 const Arrow = ({direction, onClick}) => {
 	return (
-		<div 
-			className={`slide-arrow ${direction}`} 
+		<div
+			className="arrowContainer" 
 			onClick={
 				() => {
 					onClick();
@@ -13,8 +13,9 @@ const Arrow = ({direction, onClick}) => {
 						document.getElementsByClassName('boxID')[j].setAttribute("style", "display: flex;");
 					}
 				}
-			}
-		>
+			}>
+			<div className={`slide-arrow ${direction}`} >
+			</div>
 		</div>
 	);
 }

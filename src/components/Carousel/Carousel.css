@@ -1,4 +1,12 @@
+.anglesContentContainer {
 
+	background: url("https://ubistatic19-a.akamaihd.net/resource/en-us/game/rainbow6/siege-v3/r6-siege-v3-generic-bg.jpg") center center;
+	background-size: cover;
+}
+.anglesHeader {
+	margin-top: 0px;
+	padding-top: 35px;
+}
 .carouselContainer {
 	display: flex;
 	flex-direction: column;

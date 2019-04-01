@@ -2,38 +2,83 @@
 	z-index: 10;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: #4b001e;
+	background: black;
 	box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
-	cursor: pointer;
 	user-select: none;
 }
+.bannerContainer a {
+	text-decoration: none
+}
 .bannerContainer p {
-	margin: 0;
+	text-decoration: none;
+	margin: 0 0 0 60px;
 	font-size: 60px;
-	letter-spacing: 30px;
 	user-select: none;
 	color: white;
 }
+.bannerContainer nav {
+	margin-right: 100px;
+	display: flex;
+	flex-direction: row;
+}
+.bannerContainer nav a {
+	padding: 0 10px 0 10px;
+	text-decoration: none;
+	font-family: 'siegeLike';
+	font-size: 30px;
+	color: white;
+	transition: 0.3s ease;
+}
+.bannerContainer nav a:hover {
+	background-image: linear-gradient(to right, black 0%, #2A2A2A 45%, #2A2A2A 55%, black 100%);
+	cursor: pointer;
+	transition: 0.3s ease;
+}
 @media (max-width: 800px) {
+	.bannerContainer {
+		height: 55px;
+	}
 	.bannerContainer p {
-		font-size: 45px;
-		letter-spacing: 20px;
+		font-size: 40px;
+		margin-left: 12px;
+	}
+	.bannerContainer nav {
+		margin-right: 15px;
+	}
+	.bannerContainer nav a {
+		font-size: 25px;
 	}
 }
-@media (max-width: 580px) {
+
+@media (max-width: 460px) {
+	.bannerContainer {
+		height: 45px;
+	}
 	.bannerContainer p {
 		font-size: 30px;
-		letter-spacing: 15px;
+		margin-left: 12px;
+	}
+	.bannerContainer nav {
+		margin-right: 15px;
+	}
+	.bannerContainer nav a {
+		font-size: 20px;
 	}
 }
-@media (max-width: 380px) {
+@media (max-width: 372px) {
 	.bannerContainer p {
-		letter-spacing: 10px;
+		font-size: 25px;
+	}
+	.bannerContainer nav a {
+		font-size: 16px;
+	}
+	.bannerContainer nav {
+		margin-right: 5px;
 	}
 }

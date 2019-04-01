@@ -1,0 +1,176 @@
+.homepageContainer p {
+	margin: 20px 10%;
+}
+.webmContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 100%;
+	background-size: cover;
+}
+.webmContainer h1 {
+	font-size: 5vw;
+	width: 100%;
+	z-index: 2;
+	position: absolute;
+	bottom: -5%;
+	background: rgba(0,0,0,0.5);
+}
+.bgVideo {
+	height: auto;
+	width: 100%;
+}
+
+.about {
+	position: relative;
+	border-top: 1px solid #7D7676;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	height: 80vh;
+	background: url('https://ubistatic19-a.akamaihd.net/resource/en-us/game/rainbow6/siege-v3/r6-siege-v3-bg.jpg');
+	background-size: cover;
+}
+.about h2 {
+	font-size: 80px;
+	margin-bottom: 30px;
+}
+.about p {
+	font-size: 40px;
+}
+.mapListContainer {
+	border-top: 1px solid #7D7676;
+	border-bottom: 1px solid #373737;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+	background: url('https://ubistatic19-a.akamaihd.net/resource/en-us/game/rainbow6/siege-v3/r6-siege-v3-generic-bg.jpg');
+	background-size: cover;
+}
+.mapListContainer h1 {
+	font-size: 70px;
+}
+.mapList {
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.branding {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 20vh;
+	background: black;
+}
+
+.branding h1 {
+	margin: 0;
+}
+.branding ul {
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.branding ul a {
+	font-size: 24px;
+	padding: 0 20px 0 20px;
+	cursor: pointer;
+	text-decoration: none;
+	color: white;
+}
+.branding ul a:link{
+	color: white;
+	text-decoration: none;
+}
+.backToTop {
+	font-size: 20px;
+	padding: 0 20px 0 20px;
+	cursor: pointer;
+	text-decoration: none;
+	color: white;
+	margin-bottom: 10px;
+}
+.operatorPictureContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+.operator {
+	height: 70vh;
+	width: auto;
+}
+
+@media (max-width: 1295px) {
+	.operatorPictureContainer {
+		height: 50%;
+		width: auto;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.operator {
+		height: 100%;
+		width: auto;
+	}
+	.about {
+		flex-direction: column;
+	}
+	.aboutText {
+		height: 50%;
+	}
+	.about h2 {
+	font-size: 7vw;
+	margin-bottom: 30px;
+	}
+	.about p {
+		font-size: 3.5vw;
+	}
+	.branding h1 {
+		font-size: 4vw;
+	}
+	.branding ul a {
+		font-size: 2vw;
+	}
+	.backToTop {
+		font-size: 1.7vw;
+	}
+}
+@media (max-width: 768px) {
+	.branding h1 {
+		font-size: 7vw;
+	}
+	.branding ul a {
+		font-size: 3.5vw;
+	}
+	.backToTop {
+		font-size: 3vw;
+	}
+	.about p {
+		font-size: 5vw;
+	}
+}
+@media (max-width: 490px) {
+	.branding h1 {
+		font-size: 10vw;
+	}
+	.branding ul a {
+		font-size: 5vw;
+	}
+	.backToTop {
+		font-size: 4.5vw;
+	}
+	.mapListContainer h1 {
+		font-size: 11vw;
+	}
+}
+
+
