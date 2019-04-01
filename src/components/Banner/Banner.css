@@ -40,21 +40,45 @@
 	cursor: pointer;
 	transition: 0.3s ease;
 }
-
 @media (max-width: 800px) {
+	.bannerContainer {
+		height: 55px;
+	}
 	.bannerContainer p {
-		font-size: 45px;
-		letter-spacing: 20px;
+		font-size: 40px;
+		margin-left: 12px;
+	}
+	.bannerContainer nav {
+		margin-right: 15px;
+	}
+	.bannerContainer nav a {
+		font-size: 25px;
 	}
 }
-@media (max-width: 580px) {
+
+@media (max-width: 460px) {
+	.bannerContainer {
+		height: 45px;
+	}
 	.bannerContainer p {
 		font-size: 30px;
-		letter-spacing: 15px;
+		margin-left: 12px;
+	}
+	.bannerContainer nav {
+		margin-right: 15px;
+	}
+	.bannerContainer nav a {
+		font-size: 20px;
 	}
 }
-@media (max-width: 380px) {
+@media (max-width: 372px) {
 	.bannerContainer p {
-		letter-spacing: 10px;
+		font-size: 25px;
+	}
+	.bannerContainer nav a {
+		font-size: 16px;
+	}
+	.bannerContainer nav {
+		margin-right: 5px;
 	}
 }

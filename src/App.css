@@ -51,3 +51,9 @@ h2 {
     font-size: 40px;
   }
 }
+@media (max-width: 414px) {
+  .contentContainer {
+    margin: 45px auto 0;
+
+  }
+}
