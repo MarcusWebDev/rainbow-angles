@@ -12,7 +12,7 @@
 }
 .floorNav li:hover {
 	transition: ease 0.3s;
-	background: #4F0021;
+	background: #223535;
 }
 .fullBorder {
 	border: 2px solid black;
@@ -40,16 +40,16 @@
 	width: 50px;
 }
 .floorNavButton {
-	background: #8A003B;
+	background: #4E7878;
 	/*possibly use #7D0035*/
 }
 .floorNavButton-active {
 	transition: ease 0.3s;
-	background: #4F0021;
+	background: #223535;
 }
 .floorNavButton-active:before {
 	transition: ease 0.3s;
-	background: #4F0021;	
+	background: #223535;	
 }
 .floorNavMobile {
 	display: flex;
@@ -63,7 +63,7 @@
 }
 .floorNavMobile li:hover {
 	transition: ease 0.3s;
-	background: #4F0021;	
+	background: #223535;	
 }
 @media (max-width: 1060px) {
 	.bottomFloorSkew {
@@ -81,7 +81,7 @@
 		height: 100%;
 		content: '';
 		position: absolute;
-		background: #8A003B;
+		background: #4E7878;
 		top: -2px;
 		right: 12px;
 		z-index: -1;
@@ -93,26 +93,26 @@
 		height: 100%;
 		content: '';
 		position: absolute;
-		background: #8A003B;
+		background: #4E7878;
 		top: 0px;
 		left: 0px;
 		z-index: -1;
 	}
 	.bottomFloorSkew:hover:before {
 		transition: ease 0.3s;
-		background: #4F0021;
+		background: #223535;
 	}
 	.bottomFloorSkew:hover:after {
 		transition: ease 0.3s;
-		background: #4F0021;
+		background: #223535;
 	}
 	.bottomFloorSkew.floorNavButton-active:before {
 		transition: ease 0.3s;
-		background: #4F0021;
+		background: #223535;
 	}
 	.bottomFloorSkew.floorNavButton-active:after {
 		transition: ease 0.3s;
-		background: #4F0021;
+		background: #223535;
 	}
 	.topFloorSkew {
 		position: relative;
@@ -128,7 +128,7 @@
 		height: 100%;
 		content: '';
 		position: absolute;
-		background: #8A003B;
+		background: #4E7878;
 		top: 0px;
 		left: 0px;
 		z-index: -1;
@@ -140,7 +140,7 @@
 		height: 100%;
 		content: '';
 		position: absolute;
-		background: #8A003B;
+		background: #4E7878;
 		top: -2px;
 		left: 12px;
 		z-index: -1;
@@ -148,19 +148,19 @@
 	}
 	.topFloorSkew:hover:before {
 		transition: ease 0.3s;
-		background: #4F0021;
+		background: #223535;
 	}
 	.topFloorSkew:hover:after {
 		transition: ease 0.3s;
-		background: #4F0021;
+		background: #223535;
 	}
 	.topFloorSkew.floorNavButton-active:after {
 		transition: ease 0.3s;
-		background: #4F0021;
+		background: #223535;
 	}
 	.topFloorSkew.floorNavButton-active:before {
 		transition: ease 0.3s;
-		background: #4F0021;
+		background: #223535;
 	}
 	.desktop {
 		display: none;

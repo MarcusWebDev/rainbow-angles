@@ -2,6 +2,7 @@ import React from 'react';
 import './Homepage.css';
 import Maps from '../Maps/Maps';
 import { Link } from 'react-router-dom';
+import {scrollTo} from '../Banner/Banner';
 
 const Homepage = () => { 
 	window.scrollTo(0,0);
@@ -68,10 +69,11 @@ const Homepage = () => {
 			<div className="branding">
 				<h1>MarcusWebDev</h1>
 				<ul>
-					<a>Support</a>
 					<a>Contact</a>
-					<a>Github</a>
+					<a href="https://github.com/MarcusWebDev">Github</a>
+
 				</ul>
+				<a className="backToTop" onClick={() => scrollTo('bgVideo')}>Back to the Top</a>
 			</div>
 		</div>
 	);

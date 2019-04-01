@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
 import {HashRouter as Router, Route, Link } from 'react-router-dom';
-import Banner from './components/Banner/Banner';
+import {Banner} from './components/Banner/Banner';
 import Homepage from './components/Homepage/Homepage';
 import MapGuide from './components/MapGuide/MapGuide';
 import { toTargetSlide } from './containers/actions';

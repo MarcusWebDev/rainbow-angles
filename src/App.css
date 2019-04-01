@@ -40,9 +40,6 @@ h2 {
   }
 }
 @media (max-width: 480px) {
-  .contentContainer {
-    width: 95%;
-  }
   p {
     font-size: 23px;
 

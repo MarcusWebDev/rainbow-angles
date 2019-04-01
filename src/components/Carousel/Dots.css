@@ -7,7 +7,7 @@
 	height: 15px;
 	width: 15px;
 	border-radius: 50%;
-	background: #8E003B;
+	background: #558383;
 	margin: 5px;
 	margin-bottom: 15px;
 	cursor: pointer;
@@ -15,11 +15,11 @@
 }
 .dot:hover {
 	transition: 0.5s;
-	background: #4F0021;
+	background: #223535;
 }
 .dot-active {
 	transition: 0.3s;
-	background: #4F0021;
+	background: #223535;
 }
 
 @media (max-width: 1060px) {
