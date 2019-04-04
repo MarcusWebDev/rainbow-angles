@@ -9,10 +9,9 @@ const Homepage = () => {
 	return (
 		<div className="homepageContainer">
 			<div className="webmContainer">
-				<video className="bgVideo" preload="true"autoPlay playsinline  muted loop data-flashblockwhitelisted="true" poster="https://ubistatic2-a.akamaihd.net/gamesites/rainbow6/headers/r6-header-burnthorizon.jpg">
+				<video className="bgVideo" preload="true" autoPlay playsinline muted loop data-flashblockwhitelisted="true" poster="https://ubistatic2-a.akamaihd.net/gamesites/rainbow6/headers/r6-header-burnthorizon.jpg">
 					<source type="video/webm" src="https://ubistatic2-a.akamaihd.net/gamesites/rainbow6/headers/r6-header-burnthorizon.webm"/>
 					<source type="video/mp4" src="https://ubistatic2-a.akamaihd.net/gamesites/rainbow6/headers/r6-header-burnthorizon.mp4"/>
-					
 				</video>
 				<h1 className="videoText">GAIN THE EDGE ON YOUR OPPONENTS</h1>
 			</div>
@@ -69,9 +68,8 @@ const Homepage = () => {
 			<div className="branding">
 				<h1>MarcusWebDev</h1>
 				<ul>
-					<a>Contact</a>
+					<a href="mailto:RainbowAnglesOfficial@gmail.com">Contact</a>
 					<a href="https://github.com/MarcusWebDev">Github</a>
-
 				</ul>
 				<a className="backToTop" onClick={() => scrollTo('bgVideo')}>Back to the Top</a>
 			</div>

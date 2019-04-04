@@ -59,6 +59,7 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	align-items: center;
 }
 .branding {
 	display: flex;
@@ -80,6 +81,7 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	margin: 0;
 }
 .branding ul a {
 	font-size: 24px;
@@ -128,8 +130,8 @@
 		height: 50%;
 	}
 	.about h2 {
-	font-size: 7vw;
-	margin-bottom: 30px;
+		font-size: 7vw;
+		margin-bottom: 30px;
 	}
 	.about p {
 		font-size: 3.5vw;
@@ -144,7 +146,14 @@
 		font-size: 1.7vw;
 	}
 }
+
 @media (max-width: 768px) {
+	.about h2 {
+		font-size: 8vw;
+	}
+	.about p {
+		font-size: 6vw;
+	}
 	.branding h1 {
 		font-size: 7vw;
 	}
@@ -153,9 +162,6 @@
 	}
 	.backToTop {
 		font-size: 3vw;
-	}
-	.about p {
-		font-size: 5vw;
 	}
 }
 @media (max-width: 490px) {
