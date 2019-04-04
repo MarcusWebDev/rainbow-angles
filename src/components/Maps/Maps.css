@@ -34,34 +34,55 @@
 
 @media (max-width: 1625px) {
 	.map {
-		height: 200px;
+		height: 202.5px;
 		width: 450px;
 	}
 }
 @media (max-width: 1475px) {
 	.map {
-		height: 175px;
+		height: 180px;
 		width: 400px;
 	}
 }
 @media (max-width: 1325px) {
 	.map {
-		height: 150px;
+		height: 157.5px;
 		width: 350px;
 	}
 }
 @media (max-width: 1175px) {
 	.map {
-		height: 125px;
+		height: 202.5px;
+		width: 450px;
+	}
+}
+@media (max-width: 990px) {
+	.map {
+		height: 180px;
+		width: 400px;
+	}
+}
+@media (max-width: 890px) {
+	.map {
+		height: 157.5px;
+		width: 350px;
+	}
+}
+@media (max-width: 790px) {
+	.map {
+		height: 135px;
 		width: 300px;
 	}
 }
-@media (max-width: 1025px) {
+@media (max-width: 690px) {
 	.map {
-		height: 100px;
+		height: 127.5px;
 		width: 250px;
 	}
 }
-@media (max-width: 1024px) {
-
+@media (max-width: 590px) {
+	.map {
+		height: auto;
+		width: 80vw;
+	}
 }
