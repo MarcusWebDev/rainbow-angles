@@ -8,12 +8,12 @@ to a particular image. You may also quickly navigate to the beginning of a parti
 you're on desktop, or above the image carousel if you're on mobile.
 
 ## How to add more maps
-If you'd like to develop for the project and add additional maps, you can do so in App.js by adding a new <Route> to the return statement there. The <Route> will require
-a path attribute that looks like path="/mapName/" where mapName is the name of the map. The <Route> will also require a render attribute that looks like 
-render={() => <MapGuide />}. 
+If you'd like to develop for the project and add additional maps, you can do so in App.js by adding a new `<Route>` to the return statement there. The `<Route>` will require
+a path attribute that looks like `path="/mapName/"` where mapName is the name of the map. The `<Route>` will also require a render attribute that looks like 
+`render={() => <MapGuide />}`. 
 
-### <MapGuide />
-<MapGuide /> takes several props:
+### `<MapGuide />`
+`<MapGuide />` takes several props:
 
 #### header
 A string representing the name of the map to display
