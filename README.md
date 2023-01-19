@@ -33,3 +33,17 @@ image for that angle.
 
 #### text
 An array of strings describing the angle being discussed at text[angleIndex] where angleIndex is the index of the angle being shown.
+
+## Commands
+
+### `npm install`
+Installs all dependencies.
+
+### `npm start`
+Sets up the development environment as well as starts a server.
+
+### `npm predeploy`
+Builds the project.
+
+### `npm deploy`
+Deploys the project to github pages.
