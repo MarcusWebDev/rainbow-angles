@@ -6,8 +6,8 @@
     border-width: 0 8px 8px 0;
     display: inline-block;
     padding: 3px;
-    height: 4px;
-    width: 4px;
+    height: 16px;
+    width: 16px;
     cursor: pointer;
 }
 .slide-arrow:hover {
@@ -16,7 +16,7 @@
 }
 .right {
 	position: absolute;
-	right: 0;
+	right: -10px;
 	bottom: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	transform: rotate(-45deg);
@@ -24,7 +24,7 @@
 }
 .left {
 	position: absolute;
-	left: 0;
+	left: -10px;
 	bottom: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	transform: rotate(135deg);
