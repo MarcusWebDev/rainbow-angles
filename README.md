@@ -31,5 +31,5 @@ An array of integers representing which indices of the pictures array the next f
 A two dimensional array of images in the form pictures[angleIndex][imageIndex] where angleIndex is the index of the angle being shown and imageIndex is the particular
 image for that angle.
 
-### text
+#### text
 An array of strings describing the angle being discussed at text[angleIndex] where angleIndex is the index of the angle being shown.
