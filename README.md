@@ -1,4 +1,4 @@
-# rainbowAngles
+# Rainbow Angles
 A website highlighting good angles on ranked maps of Rainbowsix Siege.
 
 ## How to use
