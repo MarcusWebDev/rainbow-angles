@@ -2,27 +2,41 @@ import React from 'react';
 import './Homepage.css';
 import Maps from '../Maps/Maps';
 import { Link } from 'react-router-dom';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import {scrollTo} from '../Banner/Banner';
+
+const responsive = {
+	all : {
+		breakpoint: { max: 4000, min: 0 },
+		items: 1
+	}
+}
 
 const Homepage = () => { 
 	window.scrollTo(0,0);
 	return (
 		<div className="homepageContainer">
-			<div className="webmContainer">
-				<video className="bgVideo" preload="true" autoPlay playsinline muted loop data-flashblockwhitelisted="true" poster="https://ubistatic2-a.akamaihd.net/gamesites/rainbow6/headers/r6-header-burnthorizon.jpg">
-					<source type="video/webm" src="https://ubistatic2-a.akamaihd.net/gamesites/rainbow6/headers/r6-header-burnthorizon.webm"/>
-					<source type="video/mp4" src="https://ubistatic2-a.akamaihd.net/gamesites/rainbow6/headers/r6-header-burnthorizon.mp4"/>
-				</video>
+			<div className="multiCarouselContainer">
+				<Carousel className="multiCarousel" responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={7000}>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/Bank.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/Border.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/Chalet.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/ClubHouse.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/Coastline.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/Consulate.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/Hereford.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/KafeDostoyevsky.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/Oregon.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/Skyscraper.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/ThemePark.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+					<div className="multiCarouselImage" style={{background: `url(${require("../../images/Villa.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
+				</Carousel>
 				<h1 className="videoText">GAIN THE EDGE ON YOUR OPPONENTS</h1>
 			</div>
-			<div className="about">
-				<div className="aboutText">
-					<h2>ABOUT</h2>
-					<p>Rainbow Angles is a website designed to feature angles you can create and hold to watch over vital parts of the maps and catch your opponents off guard.</p>
-				</div>
-				<div className="operatorPictureContainer">
-					<img className="operator" src="https://ubistatic19-a.akamaihd.net/resource/en-us/game/rainbow6/siege-v3/r6-operator-kapkan_229908.png"/>
-				</div>
+			<div className="aboutText">
+				<h2>ABOUT</h2>
+				<p>Rainbow Angles is a website designed to feature angles you can create and hold to watch over vital parts of the maps and catch your opponents off guard.</p>
 			</div>
 			<div className="mapListContainer">
 				<h1>Current Ranked Maps</h1>
