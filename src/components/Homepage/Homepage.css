@@ -7,7 +7,7 @@
 }
 
 .multiCarouselContainer h1 {
-	font-size: 5vw;
+	font-size: 70px;
 	width: 100%;
 	z-index: 2;
 	position: absolute;
@@ -23,7 +23,7 @@
 }
 
 .aboutText h2 {
-	font-size: 80px;
+	font-size: 70px;
 	margin-bottom: 30px;
 }
 .aboutText p {
@@ -88,40 +88,9 @@
 	color: white;
 	margin-bottom: 10px;
 }
-.operatorPictureContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-}
-.operator {
-	height: 70vh;
-	width: auto;
-}
+
 
 @media (max-width: 1295px) {
-	.operatorPictureContainer {
-		height: 50%;
-		width: auto;
-		justify-content: flex-end;
-		align-items: center;
-	}
-	.operator {
-		height: 100%;
-		width: auto;
-	}
-	.about {
-		flex-direction: column;
-	}
-	.aboutText {
-		height: 50%;
-	}
-	.about h2 {
-		font-size: 7vw;
-		margin-bottom: 30px;
-	}
-	.about p {
-		font-size: 3.5vw;
-	}
 	.branding h1 {
 		font-size: 4vw;
 	}
@@ -133,13 +102,13 @@
 	}
 }
 
+@media (max-width: 830px) {
+	.multiCarouselContainer h1 {
+		font-size: 50px;
+	}
+}
+
 @media (max-width: 768px) {
-	.about h2 {
-		font-size: 8vw;
-	}
-	.about p {
-		font-size: 6vw;
-	}
 	.branding h1 {
 		font-size: 7vw;
 	}
@@ -148,6 +117,9 @@
 	}
 	.backToTop {
 		font-size: 3vw;
+	}
+	.multiCarouselImage {
+		max-height: 50vh;
 	}
 }
 @media (max-width: 490px) {
@@ -160,8 +132,8 @@
 	.backToTop {
 		font-size: 4.5vw;
 	}
-	.mapListContainer h1 {
-		font-size: 11vw;
+	.multiCarouselContainer h1 {
+		font-size: 30px;
 	}
 }
 

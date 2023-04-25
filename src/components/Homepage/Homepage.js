@@ -32,7 +32,7 @@ const Homepage = () => {
 					<div className="multiCarouselImage" style={{background: `url(${require("../../images/ThemePark.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
 					<div className="multiCarouselImage" style={{background: `url(${require("../../images/Villa.jpg")}) center no-repeat`, backgroundSize: 'cover'}}/>
 				</Carousel>
-				<h1 className="videoText">GAIN THE EDGE ON YOUR OPPONENTS</h1>
+				<h1 className="multiCarouselText">GAIN THE EDGE ON YOUR OPPONENTS</h1>
 			</div>
 			<div className="aboutText">
 				<h2>ABOUT</h2>
