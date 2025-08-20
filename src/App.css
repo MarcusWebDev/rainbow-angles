@@ -1,7 +1,6 @@
 @font-face {
   font-family: "siegeLike";
   src: url("./fonts/ScoutCond-Light.otf");
-
 }
 
 body {
@@ -27,7 +26,7 @@ h2 {
 .contentContainer {
   margin: 72px auto 0;
   width: 100%;
-  background: #0D0C13;
+  background: #0d0c13;
 }
 @media (max-width: 800px) {
   .contentContainer {
@@ -42,7 +41,6 @@ h2 {
 @media (max-width: 480px) {
   p {
     font-size: 23px;
-
   }
   h1 {
     font-size: 40px;
@@ -51,6 +49,5 @@ h2 {
 @media (max-width: 414px) {
   .contentContainer {
     margin: 45px auto 0;
-
   }
 }

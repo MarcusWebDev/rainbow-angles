@@ -1,29 +1,29 @@
 .dotsContainer {
-	display: flex;
-	flex-direction: row;
-	margin-left: 25px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 25px;
 }
 .dot {
-	height: 15px;
-	width: 15px;
-	border-radius: 50%;
-	background: #558383;
-	margin: 5px;
-	margin-bottom: 15px;
-	cursor: pointer;
-	transition: 0.5s;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #558383;
+  margin: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.5s;
 }
 .dot:hover {
-	transition: 0.5s;
-	background: #223535;
+  transition: 0.5s;
+  background: #223535;
 }
 .dot-active {
-	transition: 0.3s;
-	background: #223535;
+  transition: 0.3s;
+  background: #223535;
 }
 
 @media (max-width: 1060px) {
-	.dot {
-		margin-bottom: 5px;
-	}
+  .dot {
+    margin-bottom: 5px;
+  }
 }

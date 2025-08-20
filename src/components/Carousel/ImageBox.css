@@ -1,38 +1,44 @@
 .imageContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .imageContainer img {
-	margin: 10px;
-	height: auto;
-	width: 95%;
-	cursor: pointer;
+  margin: 10px;
+  height: auto;
+  width: 95%;
+  cursor: pointer;
 }
 .loadingBox {
-	margin: 10px;
-	height: 20vh;
-	width: 30vw;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	background: #110E1A;
-	animation: pulse 2.5s infinite;
+  margin: 10px;
+  height: 20vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #110e1a;
+  animation: pulse 2.5s infinite;
 }
 @keyframes pulse {
-	0% {background: #110E1A;}
-	50% {background: #000000;}
-	100% {background: #110E1A;}
+  0% {
+    background: #110e1a;
+  }
+  50% {
+    background: #000000;
+  }
+  100% {
+    background: #110e1a;
+  }
 }
 @media (max-width: 1060px) {
-	.loadingBox {
-		height: 30vh;
-		width: 65vw;
-	}
+  .loadingBox {
+    height: 30vh;
+    width: 65vw;
+  }
 }
 @media (max-width: 480px) {
-	.imageContainer img {
-		margin: 5px;
-	}
+  .imageContainer img {
+    margin: 5px;
+  }
 }

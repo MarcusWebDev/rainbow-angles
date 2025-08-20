@@ -1,5 +1,5 @@
 {
-  "name": "rainbowangles",
+  "name": "rainbow-angles",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://marcuswebdev.github.io",
@@ -16,12 +16,13 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start ",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "start": "webpack-dev-server --hot --config=webpack.config.js",
+    "build": "webpack",
     "test": "react-scripts test",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject"
+    "deploy": "gh-pages -d dist",
+    "eject": "react-scripts eject",
+    "prepare": "husky && husky install"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +32,23 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/preset-react": "^7.27.1",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "prettier": "^3.6.2",
+    "sass": "^1.90.0",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
 }

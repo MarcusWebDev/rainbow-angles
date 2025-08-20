@@ -1,45 +1,45 @@
 .anglesHeader {
-	margin-top: 0px;
-	padding-top: 35px;
+  margin-top: 0px;
+  padding-top: 35px;
 }
 .carouselContainer {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 30px;
 }
 .anglesContainer {
-	margin-top: 45px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .anglesText {
-	margin: 20px;
-	font-size: 30px;
+  margin: 20px;
+  font-size: 30px;
 }
 
 .textContainer {
-	position: relative;
+  position: relative;
 }
 .desktop {
-	display: flex;
+  display: flex;
 }
 .phone {
-	display: none;
+  display: none;
 }
 @media (max-width: 1060px) {
-	.anglesContainer {
-		flex-direction: column;
-		margin-top: 0;
-	}
-	.anglesText {
-		margin: 0px 20px;
-	}
-	.desktop {
-		display: none;
-	}
-	.phone {
-		display: flex;
-	}
+  .anglesContainer {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .anglesText {
+    margin: 0px 20px;
+  }
+  .desktop {
+    display: none;
+  }
+  .phone {
+    display: flex;
+  }
 }

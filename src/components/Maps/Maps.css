@@ -1,88 +1,88 @@
 .map {
-	margin: 15px;
-	position: relative;
-	height: 225px;
-	width: 500px;
-	transition: 0.5s;
-	user-select: none;
-	border: 3px solid #373737;
+  margin: 15px;
+  position: relative;
+  height: 225px;
+  width: 500px;
+  transition: 0.5s;
+  user-select: none;
+  border: 3px solid #373737;
 }
 .map:hover {
-	transition: 0.5s;
-	border: 3px solid #7D7676;
+  transition: 0.5s;
+  border: 3px solid #7d7676;
 }
 .map img {
-	height: 100%;
-	width: 100%;
-	cursor: pointer;
-	user-select: none;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
 }
 .map p {
-	position: absolute;
-	margin: 0;
-	bottom: 0;
-	font-size: 30px;
-	left: 50%;
-	width: 100%;
-	transform: translateX(-50%) translateY(-50%);
-	text-align: center;
-	background: rgba(0,0,0,0.7);
-	cursor: pointer;
-	user-select: none;
-	color: white;
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  font-size: 30px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  user-select: none;
+  color: white;
 }
 
 @media (max-width: 1625px) {
-	.map {
-		height: 202.5px;
-		width: 450px;
-	}
+  .map {
+    height: 202.5px;
+    width: 450px;
+  }
 }
 @media (max-width: 1475px) {
-	.map {
-		height: 180px;
-		width: 400px;
-	}
+  .map {
+    height: 180px;
+    width: 400px;
+  }
 }
 @media (max-width: 1325px) {
-	.map {
-		height: 157.5px;
-		width: 350px;
-	}
+  .map {
+    height: 157.5px;
+    width: 350px;
+  }
 }
 @media (max-width: 1175px) {
-	.map {
-		height: 202.5px;
-		width: 450px;
-	}
+  .map {
+    height: 202.5px;
+    width: 450px;
+  }
 }
 @media (max-width: 990px) {
-	.map {
-		height: 180px;
-		width: 400px;
-	}
+  .map {
+    height: 180px;
+    width: 400px;
+  }
 }
 @media (max-width: 890px) {
-	.map {
-		height: 157.5px;
-		width: 350px;
-	}
+  .map {
+    height: 157.5px;
+    width: 350px;
+  }
 }
 @media (max-width: 790px) {
-	.map {
-		height: 135px;
-		width: 300px;
-	}
+  .map {
+    height: 135px;
+    width: 300px;
+  }
 }
 @media (max-width: 690px) {
-	.map {
-		height: 127.5px;
-		width: 250px;
-	}
+  .map {
+    height: 127.5px;
+    width: 250px;
+  }
 }
 @media (max-width: 590px) {
-	.map {
-		height: auto;
-		width: 80vw;
-	}
+  .map {
+    height: auto;
+    width: 80vw;
+  }
 }
