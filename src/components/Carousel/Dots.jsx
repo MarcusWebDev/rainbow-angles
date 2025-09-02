@@ -1,5 +1,4 @@
-import React from "react";
-import "./Dots.css";
+import "./Dots.scss";
 
 const Dots = ({ pictures, index, navigateToTargetSlide }) => {
   let className = "dot";

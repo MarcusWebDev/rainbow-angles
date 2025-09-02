@@ -1,10 +1,9 @@
-import React from "react";
-import "./Homepage.css";
-import Maps from "../Maps/Maps";
+import "./Homepage.scss";
+import Maps from "../Maps";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { scrollTo } from "../Banner/Banner";
+import scrollTo from "../../utils/scrollTo";
 
 const responsive = {
   all: {
@@ -188,7 +187,10 @@ const Homepage = () => {
           <a href="mailto:RainbowAnglesOfficial@gmail.com">Contact</a>
           <a href="https://github.com/MarcusWebDev">Github</a>
         </ul>
-        <a className="backToTop" onClick={() => scrollTo("bgVideo")}>
+        <a
+          className="backToTop"
+          onClick={() => scrollTo({ target: "bgVideo" })}
+        >
           Back to the Top
         </a>
       </div>

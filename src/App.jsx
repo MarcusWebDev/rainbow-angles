@@ -1,6 +1,6 @@
-import "./App.css";
+import "./App.scss";
 import { Outlet } from "react-router-dom";
-import { Banner } from "./components/Banner/Banner";
+import Banner from "./components/Banner";
 
 const App = () => {
   return (

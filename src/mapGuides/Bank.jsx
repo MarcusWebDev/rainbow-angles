@@ -1,4 +1,4 @@
-import MapGuide from "../components/MapGuide/MapGuide";
+import MapGuide from "../components/MapGuide";
 
 const Bank = () => {
   return (

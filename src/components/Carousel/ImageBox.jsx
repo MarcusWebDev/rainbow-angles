@@ -1,6 +1,4 @@
-import React from "react";
-import LightBox from "./LightBox";
-import "./ImageBox.css";
+import "./ImageBox.scss";
 
 const ImageBox = ({ pictures, index, onClick }) => {
   const imageArray = pictures[index].map((picture, i) => {

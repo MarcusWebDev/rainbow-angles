@@ -1,5 +1,4 @@
-import React from "react";
-import "./LightBox.css";
+import "./LightBox.scss";
 
 const LightBox = ({ picture, status, onClick }) => {
   let className = "lightBoxContainer";

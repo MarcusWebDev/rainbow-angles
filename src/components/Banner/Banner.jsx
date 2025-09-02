@@ -1,22 +1,13 @@
-import "./Banner.css";
+import "./Banner.scss";
 import { Link } from "react-router-dom";
-import { scroller } from "react-scroll";
-
-const scrollTo = (target) => {
-  scroller.scrollTo(target, {
-    duration: 800,
-    delay: 0,
-    smooth: "easeInOut",
-    offset: -72,
-  });
-};
+import scrollTo from "../../utils/scrollTo";
 
 const urlCheck = (location) => {
   if (window.location.href === "https://rainbowangles.com/#/") {
-    scrollTo(location);
+    scrollTo({ target: location });
   } else {
     window.location.href = "https://rainbowangles.com/#/";
-    scrollTo(location);
+    scrollTo({ target: location });
   }
 };
 
@@ -35,4 +26,4 @@ const Banner = () => {
   );
 };
 
-export { Banner, scrollTo };
+export default Banner;

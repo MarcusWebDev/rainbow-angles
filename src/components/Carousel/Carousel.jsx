@@ -1,6 +1,5 @@
-import React, { Component } from "react";
 import { connect } from "react-redux";
-import Arrow from "./Arrow";
+import Arrow from "./Arrow.jsx";
 import {
   nextSlide,
   prevSlide,
@@ -9,12 +8,12 @@ import {
   lightBoxOn,
   lightBoxOff,
 } from "../../containers/actions";
-import Scroll from "../Scroll/Scroll";
-import NavBar from "./NavBar";
-import ImageBox from "./ImageBox";
-import LightBox from "./LightBox";
-import Dots from "./Dots";
-import "./Carousel.css";
+import Scroll from "../Scroll";
+import NavBar from "./NavBar.jsx";
+import ImageBox from "./ImageBox.jsx";
+import LightBox from "./LightBox.jsx";
+import Dots from "./Dots.jsx";
+import "./Carousel.scss";
 
 const mapStateToProps = (state) => {
   return {

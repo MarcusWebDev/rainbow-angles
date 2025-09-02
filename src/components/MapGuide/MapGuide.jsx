@@ -1,17 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import "./MapGuide.css";
-import Carousel from "../Carousel/Carousel";
+import "./MapGuide.scss";
+import Carousel from "../Carousel";
 import { toTargetSlide } from "../../containers/actions";
-import { scroller } from "react-scroll";
-
-const scrollTo = (target) => {
-  scroller.scrollTo(target, {
-    duration: 800,
-    smooth: "easeInOut",
-    offset: -72,
-  });
-};
+import scrollTo from "../../utils/scrollTo";
 
 const mapStateToProps = (state) => {
   return {
@@ -53,7 +45,10 @@ const MapGuide = ({
     let scrollTimeoutId;
 
     if (!hasScrolled) {
-      scrollTimeoutId = setTimeout(() => scrollTo("anglesHeader"), 1000);
+      scrollTimeoutId = setTimeout(
+        () => scrollTo({ target: "anglesHeader" }),
+        1000,
+      );
     }
 
     return () => {

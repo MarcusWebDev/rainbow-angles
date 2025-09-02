@@ -1,5 +1,4 @@
-import React from "react";
-import "./Maps.css";
+import "./Maps.scss";
 
 const Maps = ({ title, picture }) => {
   return (
