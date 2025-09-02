@@ -4,16 +4,16 @@
   "private": true,
   "homepage": "https://marcuswebdev.github.io",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "gh-pages": "^2.0.1",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-multi-carousel": "^2.8.3",
-    "react-redux": "^5.1.0",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.5",
-    "react-scroll": "^1.7.11",
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.8.2",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.3",
+    "redux": "^5.0.1"
   },
   "scripts": {
     "start": "webpack-dev-server --hot --config=webpack.config.js",
@@ -22,7 +22,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "eject": "react-scripts eject",
-    "prepare": "husky && husky install"
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": "react-app"

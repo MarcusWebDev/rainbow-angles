@@ -1,5 +1,4 @@
 import {
-  CHANGE_ROUTE,
   NEXT_SLIDE,
   PREV_SLIDE,
   TO_FLOOR,
@@ -42,7 +41,6 @@ export const controlCarousel = (state = initialStateCarousel, action = {}) => {
       });
     }
     case TURN_ON_LIGHT_BOX: {
-      console.log(action.picture);
       return Object.assign({}, state, {
         lightBoxStatus: action.status,
         lightBoxPicture: action.picture,

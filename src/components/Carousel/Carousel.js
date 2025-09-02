@@ -47,119 +47,112 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-class Carousel extends Component {
-  render() {
-    const {
-      pictures,
-      slideIndex,
-      text,
-      floorStart,
-      floorNames,
-      lightBoxStatus,
-      lightBoxPicture,
-      slideChangeNext,
-      slideChangePrev,
-      navigateToFloor,
-      navigateToTargetSlide,
-      turnOnLightBox,
-      turnOffLightBox,
-    } = this.props;
+const Carousel = ({
+  pictures,
+  slideIndex,
+  text,
+  floorStart,
+  floorNames,
+  lightBoxStatus,
+  lightBoxPicture,
+  slideChangeNext,
+  slideChangePrev,
+  navigateToFloor,
+  navigateToTargetSlide,
+  turnOnLightBox,
+  turnOffLightBox,
+}) => {
+  const shortToFull = {
+    B: "Basement",
+    "1st": "First Floor",
+    "2nd": "Second Floor",
+    "3rd": "Third Floor",
+    "4th": "Fourth Floor",
+  };
+  const fullFloorNames = floorNames.map(
+    (name) => shortToFull[name] || "Something's wrong with the header",
+  );
 
-    const shortToFull = {
-      B: "Basement",
-      "1st": "First Floor",
-      "2nd": "Second Floor",
-      "3rd": "Third Floor",
-      "4th": "Fourth Floor",
-    };
-    const fullFloorNames = floorNames.map(
-      (name) => shortToFull[name] || "Something's wrong with the header",
-    );
-
-    return (
-      <div className="anglesContentContainer">
-        <h1 className="anglesHeader">
-          {fullFloorNames.map((name, i) => {
-            if (i === 0) {
-              if (slideIndex < floorStart[0]) {
-                return fullFloorNames[0];
-              }
-            } else if (i === fullFloorNames.length - 1) {
-              if (slideIndex >= floorStart[floorStart.length - 1]) {
-                return fullFloorNames[fullFloorNames.length - 1];
-              }
-            } else {
-              if (
-                slideIndex >= floorStart[i - 1] &&
-                slideIndex < floorStart[i]
-              ) {
-                return fullFloorNames[i];
-              }
+  return (
+    <div className="anglesContentContainer">
+      <h1 className="anglesHeader">
+        {fullFloorNames.map((name, i) => {
+          if (i === 0) {
+            if (slideIndex < floorStart[0]) {
+              return fullFloorNames[0];
             }
-          })}
-        </h1>
-        <NavBar
-          floorStart={floorStart}
-          slideIndex={slideIndex}
-          floorNames={floorNames}
-          onClick={(floors) => navigateToFloor(floors)}
-        />
-        <div className="anglesContainer">
-          <div className="carouselContainer">
-            <div>
-              <Arrow
-                direction="left"
-                onClick={() => {
-                  slideChangePrev(slideIndex, pictures);
-                }}
+          } else if (i === fullFloorNames.length - 1) {
+            if (slideIndex >= floorStart[floorStart.length - 1]) {
+              return fullFloorNames[fullFloorNames.length - 1];
+            }
+          } else {
+            if (slideIndex >= floorStart[i - 1] && slideIndex < floorStart[i]) {
+              return fullFloorNames[i];
+            }
+          }
+        })}
+      </h1>
+      <NavBar
+        floorStart={floorStart}
+        slideIndex={slideIndex}
+        floorNames={floorNames}
+        onClick={(floors) => navigateToFloor(floors)}
+      />
+      <div className="anglesContainer">
+        <div className="carouselContainer">
+          <div>
+            <Arrow
+              direction="left"
+              onClick={() => {
+                slideChangePrev(slideIndex, pictures);
+              }}
+            />
+            <Scroll>
+              <ImageBox
+                pictures={pictures}
+                index={slideIndex}
+                onClick={(test) => turnOnLightBox(test)}
               />
-              <Scroll>
-                <ImageBox
-                  pictures={pictures}
-                  index={slideIndex}
-                  onClick={(test) => turnOnLightBox(test)}
-                />
-                <LightBox
-                  picture={lightBoxPicture}
-                  status={lightBoxStatus}
-                  onClick={() => turnOffLightBox()}
-                />
-              </Scroll>
-              <Arrow
-                direction="right"
-                onClick={() => {
-                  slideChangeNext(slideIndex, pictures);
-                }}
+              <LightBox
+                picture={lightBoxPicture}
+                status={lightBoxStatus}
+                onClick={() => turnOffLightBox()}
               />
-            </div>
-            <Dots
-              pictures={pictures}
-              index={slideIndex}
-              navigateToTargetSlide={navigateToTargetSlide}
+            </Scroll>
+            <Arrow
+              direction="right"
+              onClick={() => {
+                slideChangeNext(slideIndex, pictures);
+              }}
             />
           </div>
-          <div className="textContainer">
-            <div className="desktop">
-              <NavBar
-                floorStart={floorStart}
-                slideIndex={slideIndex}
-                floorNames={floorNames}
-                onClick={(floors) => navigateToFloor(floors)}
-              />
-            </div>
-            <div className="desktop">
-              <Scroll>
-                <p className="anglesText">{text[slideIndex]}</p>
-              </Scroll>
-            </div>
-            <div className="anglesText phone">
-              <p>{text[slideIndex]}</p>
-            </div>
+          <Dots
+            pictures={pictures}
+            index={slideIndex}
+            navigateToTargetSlide={navigateToTargetSlide}
+          />
+        </div>
+        <div className="textContainer">
+          <div className="desktop">
+            <NavBar
+              floorStart={floorStart}
+              slideIndex={slideIndex}
+              floorNames={floorNames}
+              onClick={(floors) => navigateToFloor(floors)}
+            />
+          </div>
+          <div className="desktop">
+            <Scroll>
+              <p className="anglesText">{text[slideIndex]}</p>
+            </Scroll>
+          </div>
+          <div className="anglesText phone">
+            <p>{text[slideIndex]}</p>
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Carousel);

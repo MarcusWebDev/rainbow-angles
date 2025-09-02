@@ -1,22 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import "./MapGuide.css";
 import Carousel from "../Carousel/Carousel";
 import { toTargetSlide } from "../../containers/actions";
-import * as Scroll from "react-scroll";
-import {
-  Link as scrollLink,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { scroller } from "react-scroll";
+
+const scrollTo = (target) => {
+  scroller.scrollTo(target, {
+    duration: 800,
+    smooth: "easeInOut",
+    offset: -72,
+  });
+};
 
 const mapStateToProps = (state) => {
   return {
     slideIndex: state.controlCarousel.slideIndex,
   };
 };
+
 const mapDispatchToProps = (dispatch) => {
   return {
     navigateToTargetSlide: (targetSlide) => {
@@ -25,58 +27,67 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-class MapGuide extends Component {
-  scrollTo(target) {
-    scroller.scrollTo(target, {
-      duration: 800,
-      delay: 1000,
-      smooth: "easeInOut",
-      offset: -72,
-    });
-  }
+const MapGuide = ({
+  navigateToTargetSlide,
+  headerPicture,
+  header,
+  text,
+  pictures,
+  floorStart,
+  floorNames,
+}) => {
+  const [hasScrolled, setHasScrolled] = React.useState(false);
 
-  componentWillMount() {
+  const handleScroll = React.useCallback(() => {
+    if (!hasScrolled) {
+      setHasScrolled(true);
+    }
+  }, [hasScrolled]);
+
+  React.useLayoutEffect(() => {
     window.scrollTo(0, 0);
-    this.props.navigateToTargetSlide(0);
-  }
+    navigateToTargetSlide(0);
+  }, []);
 
-  componentDidMount() {
-    this.scrollTo("anglesHeader");
-  }
+  React.useEffect(() => {
+    let scrollTimeoutId;
 
-  render() {
-    const {
-      slideIndex,
-      navigateToTargetSlide,
-      headerPicture,
-      header,
-      text,
-      pictures,
-      video,
-      floorStart,
-      floorNames,
-    } = this.props;
+    if (!hasScrolled) {
+      scrollTimeoutId = setTimeout(() => scrollTo("anglesHeader"), 1000);
+    }
 
-    return (
-      <div>
-        <div
-          className="headerContainer"
-          style={{
-            background: `url(${headerPicture}) center no-repeat`,
-            backgroundSize: "cover",
-          }}
-        >
-          <h1>{header.toUpperCase()}</h1>
-        </div>
-        <Carousel
-          pictures={pictures}
-          text={text}
-          floorStart={floorStart}
-          floorNames={floorNames}
-        />
+    return () => {
+      clearTimeout(scrollTimeoutId);
+    };
+  }, [hasScrolled]);
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
+  return (
+    <div className="MapGuide">
+      <div
+        className="headerContainer"
+        style={{
+          background: `url(${headerPicture}) center no-repeat`,
+          backgroundSize: "cover",
+        }}
+      >
+        <h1>{header.toUpperCase()}</h1>
       </div>
-    );
-  }
-}
+      <Carousel
+        pictures={pictures}
+        text={text}
+        floorStart={floorStart}
+        floorNames={floorNames}
+      />
+    </div>
+  );
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(MapGuide);
