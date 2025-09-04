@@ -4,10 +4,10 @@ const KafeDostoyevsky = () => {
   return (
     <MapGuide
       header={"KAFE DOSTOYEVSKY"}
-      headerPicture={require("../images/KafeDostoyevsky.jpg")}
+      headerImage={require("../images/KafeDostoyevsky.jpg")}
       floorNames={["1st", "2nd", "3rd"]}
       floorStart={[3, 7]}
-      pictures={[
+      images={[
         [
           require("../images/kafeDostoyevsky/1st1_1.png"),
           require("../images/kafeDostoyevsky/1st1_2.png"),

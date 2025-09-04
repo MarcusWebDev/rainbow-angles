@@ -4,10 +4,10 @@ const Border = () => {
   return (
     <MapGuide
       header={"Border"}
-      headerPicture={require("../images/Border.jpg")}
+      headerImage={require("../images/Border.jpg")}
       floorNames={["1st", "2nd"]}
       floorStart={[4]}
-      pictures={[
+      images={[
         [
           require("../images/border/1st1_1.png"),
           require("../images/border/1st1_2.png"),

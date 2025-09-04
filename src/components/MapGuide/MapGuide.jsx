@@ -21,10 +21,10 @@ const mapDispatchToProps = (dispatch) => {
 
 const MapGuide = ({
   navigateToTargetSlide,
-  headerPicture,
+  headerImage,
   header,
   text,
-  pictures,
+  images,
   floorStart,
   floorNames,
 }) => {
@@ -67,16 +67,16 @@ const MapGuide = ({
   return (
     <div className="MapGuide">
       <div
-        className="headerContainer"
+        className="header-container"
         style={{
-          background: `url(${headerPicture}) center no-repeat`,
+          background: `url(${headerImage}) center no-repeat`,
           backgroundSize: "cover",
         }}
       >
         <h1>{header.toUpperCase()}</h1>
       </div>
       <Carousel
-        pictures={pictures}
+        images={images}
         text={text}
         floorStart={floorStart}
         floorNames={floorNames}

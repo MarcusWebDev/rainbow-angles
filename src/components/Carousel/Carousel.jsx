@@ -15,45 +15,14 @@ import LightBox from "./LightBox.jsx";
 import Dots from "./Dots.jsx";
 import "./Carousel.scss";
 
-const mapStateToProps = (state) => {
-  return {
-    slideIndex: state.controlCarousel.slideIndex,
-    lightBoxStatus: state.controlCarousel.lightBoxStatus,
-    lightBoxPicture: state.controlCarousel.lightBoxPicture,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    slideChangeNext: (slideIndex, pictures) => {
-      dispatch(nextSlide(slideIndex, pictures));
-    },
-    slideChangePrev: (slideIndex, pictures) => {
-      dispatch(prevSlide(slideIndex, pictures));
-    },
-    navigateToFloor: (floorStart) => {
-      dispatch(toFloor(floorStart));
-    },
-    navigateToTargetSlide: (targetSlide) => {
-      dispatch(toTargetSlide(targetSlide));
-    },
-    turnOnLightBox: (lightBoxPicture) => {
-      dispatch(lightBoxOn(lightBoxPicture));
-    },
-    turnOffLightBox: () => {
-      dispatch(lightBoxOff());
-    },
-  };
-};
-
 const Carousel = ({
-  pictures,
+  images,
   slideIndex,
   text,
   floorStart,
   floorNames,
   lightBoxStatus,
-  lightBoxPicture,
+  lightBoxImage,
   slideChangeNext,
   slideChangePrev,
   navigateToFloor,
@@ -68,14 +37,12 @@ const Carousel = ({
     "3rd": "Third Floor",
     "4th": "Fourth Floor",
   };
-  const fullFloorNames = floorNames.map(
-    (name) => shortToFull[name] || "Something's wrong with the header",
-  );
+  const fullFloorNames = floorNames.map((name) => shortToFull[name]);
 
   return (
-    <div className="anglesContentContainer">
-      <h1 className="anglesHeader">
-        {fullFloorNames.map((name, i) => {
+    <div className="Carousel">
+      <h1 className="header">
+        {fullFloorNames.map((_, i) => {
           if (i === 0) {
             if (slideIndex < floorStart[0]) {
               return fullFloorNames[0];
@@ -97,23 +64,22 @@ const Carousel = ({
         floorNames={floorNames}
         onClick={(floors) => navigateToFloor(floors)}
       />
-      <div className="anglesContainer">
-        <div className="carouselContainer">
+      <div className="content-container">
+        <div className="carousel-container">
           <div>
             <Arrow
               direction="left"
               onClick={() => {
-                slideChangePrev(slideIndex, pictures);
+                slideChangePrev(slideIndex, images);
               }}
             />
             <Scroll>
               <ImageBox
-                pictures={pictures}
-                index={slideIndex}
-                onClick={(test) => turnOnLightBox(test)}
+                images={images[slideIndex]}
+                onClick={(image) => turnOnLightBox(image)}
               />
               <LightBox
-                picture={lightBoxPicture}
+                image={lightBoxImage}
                 status={lightBoxStatus}
                 onClick={() => turnOffLightBox()}
               />
@@ -121,17 +87,17 @@ const Carousel = ({
             <Arrow
               direction="right"
               onClick={() => {
-                slideChangeNext(slideIndex, pictures);
+                slideChangeNext(slideIndex, images);
               }}
             />
           </div>
           <Dots
-            pictures={pictures}
+            images={images}
             index={slideIndex}
             navigateToTargetSlide={navigateToTargetSlide}
           />
         </div>
-        <div className="textContainer">
+        <div className="text-container">
           <div className="desktop">
             <NavBar
               floorStart={floorStart}
@@ -139,19 +105,48 @@ const Carousel = ({
               floorNames={floorNames}
               onClick={(floors) => navigateToFloor(floors)}
             />
-          </div>
-          <div className="desktop">
             <Scroll>
-              <p className="anglesText">{text[slideIndex]}</p>
+              <p className="angles-text">{text[slideIndex]}</p>
             </Scroll>
           </div>
-          <div className="anglesText phone">
+          <div className="angles-text phone">
             <p>{text[slideIndex]}</p>
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+const mapStateToProps = (state) => {
+  return {
+    slideIndex: state.controlCarousel.slideIndex,
+    lightBoxStatus: state.controlCarousel.lightBoxStatus,
+    lightBoxImage: state.controlCarousel.lightBoxImage,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    slideChangeNext: (slideIndex, images) => {
+      dispatch(nextSlide(slideIndex, images));
+    },
+    slideChangePrev: (slideIndex, images) => {
+      dispatch(prevSlide(slideIndex, images));
+    },
+    navigateToFloor: (floorStart) => {
+      dispatch(toFloor(floorStart));
+    },
+    navigateToTargetSlide: (targetSlide) => {
+      dispatch(toTargetSlide(targetSlide));
+    },
+    turnOnLightBox: (lightBoxImage) => {
+      dispatch(lightBoxOn(lightBoxImage));
+    },
+    turnOffLightBox: () => {
+      dispatch(lightBoxOff());
+    },
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Carousel);

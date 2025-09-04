@@ -4,10 +4,10 @@ const Coastline = () => {
   return (
     <MapGuide
       header={"COASTLINE"}
-      headerPicture={require("../images/Coastline.jpg")}
+      headerImage={require("../images/Coastline.jpg")}
       floorNames={["1st", "2nd"]}
       floorStart={[3]}
-      pictures={[
+      images={[
         [
           require("../images/coastline/1st1_1.png"),
           require("../images/coastline/1st1_2.png"),

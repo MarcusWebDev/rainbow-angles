@@ -13,7 +13,7 @@ const urlCheck = (location) => {
 
 const Banner = () => {
   return (
-    <div className="bannerContainer">
+    <div className="Banner">
       <Link to="/">
         <p>RAINBOW ANGLES</p>
       </Link>

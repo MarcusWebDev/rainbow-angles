@@ -4,10 +4,10 @@ const ThemePark = () => {
   return (
     <MapGuide
       header={"THEME PARK"}
-      headerPicture={require("../images/ThemePark.jpg")}
+      headerImage={require("../images/ThemePark.jpg")}
       floorNames={["1st", "2nd"]}
       floorStart={[6]}
-      pictures={[
+      images={[
         [
           require("../images/themePark/1st1_1.png"),
           require("../images/themePark/1st1_2.png"),

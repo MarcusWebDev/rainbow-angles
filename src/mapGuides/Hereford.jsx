@@ -4,10 +4,10 @@ const Hereford = () => {
   return (
     <MapGuide
       header={"HEREFORD"}
-      headerPicture={require("../images/Hereford.jpg")}
+      headerImage={require("../images/Hereford.jpg")}
       floorNames={["B", "1st", "2nd", "3rd"]}
       floorStart={[2, 4, 5]}
-      pictures={[
+      images={[
         [
           require("../images/hereford/B1_1.png"),
           require("../images/hereford/B1_2.png"),

@@ -1,25 +1,38 @@
-.imageContainer {
+.ImageBox {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  .Image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    img {
+      margin: 10px;
+      height: auto;
+      width: 95%;
+      cursor: pointer;
+    }
+
+    .loading-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 20vh;
+      box-sizing: border-box;
+      padding: 20px;
+      margin: 10px;
+      background: #110e1a;
+      animation: pulse 2.5s infinite;
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
 }
-.imageContainer img {
-  margin: 10px;
-  height: auto;
-  width: 95%;
-  cursor: pointer;
-}
-.loadingBox {
-  margin: 10px;
-  height: 20vh;
-  width: 30vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: #110e1a;
-  animation: pulse 2.5s infinite;
-}
+
 @keyframes pulse {
   0% {
     background: #110e1a;
@@ -31,14 +44,20 @@
     background: #110e1a;
   }
 }
+
 @media (max-width: 1060px) {
-  .loadingBox {
-    height: 30vh;
-    width: 65vw;
+  .ImageBox {
+    .Image {
+      .loading-box {
+        height: 30vh;
+      }
+    }
   }
 }
 @media (max-width: 480px) {
-  .imageContainer img {
-    margin: 5px;
+  .ImageBox {
+    img {
+      margin: 5px;
+    }
   }
 }

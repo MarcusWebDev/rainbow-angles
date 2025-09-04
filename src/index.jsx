@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { controlCarousel } from "./containers/reducers.js";
 import "./index.scss";
 import App from "./App.jsx";
-import Homepage from "./components/Homepage/Homepage.jsx";
+import HomePage from "./components/HomePage";
 import Bank from "./mapGuides/Bank.jsx";
 import Border from "./mapGuides/Border.jsx";
 import Chalet from "./mapGuides/Chalet.jsx";
@@ -27,7 +27,7 @@ const router = createHashRouter([
     children: [
       {
         path: "/",
-        Component: Homepage,
+        Component: HomePage,
       },
       {
         path: "/bank/",

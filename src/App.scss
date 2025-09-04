@@ -1,60 +1,62 @@
-@font-face {
-  font-family: "siegeLike";
-  src: url("./fonts/ScoutCond-Light.otf");
-}
-
 body {
   color: white;
   text-align: center;
 }
 
-p {
-  font-family: "siegeLike";
-  font-size: 30px;
-  letter-spacing: 2px;
-}
+.App {
+  p {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
 
-h1 {
-  font-family: "siegeLike";
-  letter-spacing: 5px;
-  font-size: 60px;
-}
+  h1 {
+    letter-spacing: 5px;
+    font-size: 60px;
+  }
 
-h2 {
-  font-family: "siegeLike";
-  letter-spacing: 5px;
-  font-size: 40px;
-}
+  h2 {
+    letter-spacing: 5px;
+    font-size: 40px;
+  }
 
-.contentContainer {
-  margin: 72px auto 0;
-  width: 100%;
-  background: #0d0c13;
+  .content-container {
+    margin: 72px auto 0;
+    width: 100%;
+    background: #0d0c13;
+  }
 }
 
 @media (max-width: 800px) {
-  .contentContainer {
-    margin: 54px auto 0;
+  .App {
+    .content-container {
+      margin: 54px auto 0;
+    }
   }
 }
 
 @media (max-width: 580px) {
-  .contentContainer {
-    margin: 36px auto 0;
+  .App {
+    .content-container {
+      margin: 36px auto 0;
+    }
   }
 }
 
 @media (max-width: 480px) {
-  p {
-    font-size: 23px;
-  }
-  h1 {
-    font-size: 40px;
+  .App {
+    p {
+      font-size: 23px;
+    }
+    h1 {
+      font-size: 40px;
+    }
   }
 }
 
 @media (max-width: 414px) {
-  .contentContainer {
-    margin: 45px auto 0;
+  .App {
+    .content-container {
+      margin: 45px auto 0;
+    }
   }
 }

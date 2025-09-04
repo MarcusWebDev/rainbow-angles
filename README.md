@@ -23,7 +23,7 @@ a path attribute that looks like `path="/mapName/"` where mapName is the name of
 
 A string representing the name of the map to display
 
-#### headerPicture
+#### headerImage
 
 The image to display for the map
 
@@ -33,11 +33,11 @@ An array of strings representing the floor names
 
 #### floorStart
 
-An array of integers representing which indices of the pictures array the next floor starts on (excluding index 0 since the bottom floor always starts at index 0).
+An array of integers representing which indices of the images array the next floor starts on (excluding index 0 since the bottom floor always starts at index 0).
 
-#### pictures
+#### images
 
-A two dimensional array of images in the form pictures[angleIndex][imageIndex] where angleIndex is the index of the angle being shown and imageIndex is the particular
+A two dimensional array of images in the form images[angleIndex][imageIndex] where angleIndex is the index of the angle being shown and imageIndex is the particular
 image for that angle.
 
 #### text

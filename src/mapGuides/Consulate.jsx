@@ -4,10 +4,10 @@ const Consulate = () => {
   return (
     <MapGuide
       header={"CONSULATE"}
-      headerPicture={require("../images/Consulate.jpg")}
+      headerImage={require("../images/Consulate.jpg")}
       floorNames={["B", "1st", "2nd"]}
       floorStart={[4, 6]}
-      pictures={[
+      images={[
         [
           require("../images/consulate/B1_1.png"),
           require("../images/consulate/B1_2.png"),

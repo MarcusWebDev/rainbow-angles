@@ -7,16 +7,16 @@ import {
   TURN_OFF_LIGHT_BOX,
 } from "./constants";
 
-export const nextSlide = (slideIndex, pictures) => ({
+export const nextSlide = (slideIndex, images) => ({
   type: NEXT_SLIDE,
   slideIndex: slideIndex,
-  slides: pictures,
+  slides: images,
 });
 
-export const prevSlide = (slideIndex, pictures) => ({
+export const prevSlide = (slideIndex, images) => ({
   type: PREV_SLIDE,
   slideIndex: slideIndex,
-  slides: pictures,
+  slides: images,
 });
 export const toFloor = (floorStart) => ({
   type: TO_FLOOR,
@@ -27,10 +27,10 @@ export const toTargetSlide = (targetSlide) => ({
   type: TO_TARGET_SLIDE,
   targetSlide: targetSlide,
 });
-export const lightBoxOn = (lightBoxPicture) => ({
+export const lightBoxOn = (lightBoxImage) => ({
   type: TURN_ON_LIGHT_BOX,
   status: "on",
-  picture: lightBoxPicture,
+  image: lightBoxImage,
 });
 export const lightBoxOff = () => ({
   type: TURN_OFF_LIGHT_BOX,

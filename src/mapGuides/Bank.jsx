@@ -4,10 +4,10 @@ const Bank = () => {
   return (
     <MapGuide
       header={"BANK"}
-      headerPicture={require("../images/Bank.jpg")}
+      headerImage={require("../images/Bank.jpg")}
       floorNames={["B", "1st", "2nd"]}
       floorStart={[1, 4]}
-      pictures={[
+      images={[
         [
           require("../images/bank/B1_1.png"),
           require("../images/bank/B1_2.png"),

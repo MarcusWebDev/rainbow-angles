@@ -1,5 +1,6 @@
-import "./Homepage.scss";
-import Maps from "../Maps";
+import React from "react";
+import "./HomePage.scss";
+import MapLink from "../MapLink";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -12,106 +13,107 @@ const responsive = {
   },
 };
 
-const Homepage = () => {
-  window.scrollTo(0, 0);
+const HomePage = () => {
+  React.useEffect(() => window.scrollTo(0, 0), []);
+
   return (
-    <div className="homepageContainer">
-      <div className="multiCarouselContainer">
+    <div className="HomePage">
+      <div className="multi-carousel-container">
         <Carousel
-          className="multiCarousel"
+          className="multi-carousel"
           responsive={responsive}
           infinite={true}
           autoPlay={true}
           autoPlaySpeed={7000}
         >
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/Bank.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/Border.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/Chalet.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/ClubHouse.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/Coastline.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/Consulate.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/Hereford.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/KafeDostoyevsky.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/Oregon.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/Skyscraper.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/ThemePark.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
           <div
-            className="multiCarouselImage"
+            className="multi-carousel-image"
             style={{
               background: `url(${require("../../images/Villa.jpg")}) center no-repeat`,
               backgroundSize: "cover",
             }}
           />
         </Carousel>
-        <h1 className="multiCarouselText">GAIN THE EDGE ON YOUR OPPONENTS</h1>
+        <h1 className="multi-carousel-text">GAIN THE EDGE ON YOUR OPPONENTS</h1>
       </div>
-      <div className="aboutText">
+      <div className="about-text">
         <h2>ABOUT</h2>
         <p>
           Rainbow Angles is a website designed to feature angles you can create
@@ -119,66 +121,69 @@ const Homepage = () => {
           opponents off guard.
         </p>
       </div>
-      <div className="mapListContainer">
+      <div className="map-list-container">
         <h1>Current Ranked Maps</h1>
-        <div className="mapList">
-          <Link to="/bank/">
-            <Maps title="Bank" picture={require("../../images/Bank.jpg")} />
-          </Link>
-          <Link to="/border/">
-            <Maps title="Border" picture={require("../../images/Border.jpg")} />
-          </Link>
-          <Link to="/chalet/">
-            <Maps title="Chalet" picture={require("../../images/Chalet.jpg")} />
-          </Link>
-          <Link to="/club_house/">
-            <Maps
-              title="Club House"
-              picture={require("../../images/ClubHouse.jpg")}
-            />
-          </Link>
-          <Link to="/coastline/">
-            <Maps
-              title="Coastline"
-              picture={require("../../images/Coastline.jpg")}
-            />
-          </Link>
-          <Link to="/consulate/">
-            <Maps
-              title="Consulate"
-              picture={require("../../images/Consulate.jpg")}
-            />
-          </Link>
-          <Link to="/hereford/">
-            <Maps
-              title="Hereford"
-              picture={require("../../images/Hereford.jpg")}
-            />
-          </Link>
-          <Link to="/kafe_dostoyevsky/">
-            <Maps
-              title="Kafe Dostoyevsky"
-              picture={require("../../images/KafeDostoyevsky.jpg")}
-            />
-          </Link>
-          <Link to="/oregon/">
-            <Maps title="Oregon" picture={require("../../images/Oregon.jpg")} />
-          </Link>
-          <Link to="/skyscraper/">
-            <Maps
-              title="Skyscraper"
-              picture={require("../../images/Skyscraper.jpg")}
-            />
-          </Link>
-          <Link to="/theme_park/">
-            <Maps
-              title="Theme Park"
-              picture={require("../../images/ThemePark.jpg")}
-            />
-          </Link>
-          <Link to="/villa/">
-            <Maps title="Villa" picture={require("../../images/Villa.jpg")} />
-          </Link>
+        <div className="map-list">
+          <MapLink
+            to="/bank/"
+            title="Bank"
+            image={require("../../images/Bank.jpg")}
+          />
+          <MapLink
+            to="/border/"
+            title="Border"
+            image={require("../../images/Border.jpg")}
+          />
+          <MapLink
+            to="/chalet/"
+            title="Chalet"
+            image={require("../../images/Chalet.jpg")}
+          />
+          <MapLink
+            to="/club_house/"
+            title="Club House"
+            image={require("../../images/ClubHouse.jpg")}
+          />
+          <MapLink
+            to="/coastline/"
+            title="Coastline"
+            image={require("../../images/Coastline.jpg")}
+          />
+          <MapLink
+            to="/consulate/"
+            title="Consulate"
+            image={require("../../images/Consulate.jpg")}
+          />
+          <MapLink
+            to="/hereford/"
+            title="Hereford"
+            image={require("../../images/Hereford.jpg")}
+          />
+          <MapLink
+            to="/kafe_dostoyevsky/"
+            title="Kafe Dostoyevsky"
+            image={require("../../images/KafeDostoyevsky.jpg")}
+          />
+          <MapLink
+            to="/oregon/"
+            title="Oregon"
+            image={require("../../images/Oregon.jpg")}
+          />
+          <MapLink
+            to="/skyscraper/"
+            title="Skyscraper"
+            image={require("../../images/Skyscraper.jpg")}
+          />
+          <MapLink
+            to="/theme_park/"
+            title="Theme Park"
+            image={require("../../images/ThemePark.jpg")}
+          />
+          <MapLink
+            to="/villa/"
+            title="Villa"
+            image={require("../../images/Villa.jpg")}
+          />
         </div>
       </div>
       <div className="branding">
@@ -188,7 +193,7 @@ const Homepage = () => {
           <a href="https://github.com/MarcusWebDev">Github</a>
         </ul>
         <a
-          className="backToTop"
+          className="back-to-top"
           onClick={() => scrollTo({ target: "bgVideo" })}
         >
           Back to the Top
@@ -198,4 +203,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;

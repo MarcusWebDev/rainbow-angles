@@ -1,30 +1,36 @@
-.lightBoxContainer {
+.LightBox {
   display: none;
-}
-.lightBoxContainer-active {
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background: rgba(0, 0, 0, 0.9);
-  cursor: pointer;
-}
-.lightBoxPictureContainer {
-  margin: 15px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.lightBoxPicture {
-  width: 90vw;
-}
-@media (max-width: 480px) {
-  .lightBoxPicture {
+
+  &.active {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
     width: 100vw;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+  }
+
+  .image-container {
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      width: 90vw;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Lightbox {
+    img {
+      width: 100vw;
+    }
   }
 }

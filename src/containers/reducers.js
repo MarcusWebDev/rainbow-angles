@@ -43,7 +43,7 @@ export const controlCarousel = (state = initialStateCarousel, action = {}) => {
     case TURN_ON_LIGHT_BOX: {
       return Object.assign({}, state, {
         lightBoxStatus: action.status,
-        lightBoxPicture: action.picture,
+        lightBoxImage: action.image,
       });
     }
     case TURN_OFF_LIGHT_BOX: {

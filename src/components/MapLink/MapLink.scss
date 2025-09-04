@@ -1,4 +1,6 @@
-.map {
+.MapLink {
+  display: flex;
+  flex-direction: column;
   margin: 15px;
   position: relative;
   height: 225px;
@@ -6,82 +8,85 @@
   transition: 0.5s;
   user-select: none;
   border: 3px solid #373737;
-}
-.map:hover {
-  transition: 0.5s;
-  border: 3px solid #7d7676;
-}
-.map img {
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-  user-select: none;
-}
-.map p {
-  position: absolute;
-  margin: 0;
-  bottom: 0;
-  font-size: 30px;
-  left: 50%;
-  width: 100%;
-  transform: translateX(-50%) translateY(-50%);
-  text-align: center;
-  background: rgba(0, 0, 0, 0.7);
-  cursor: pointer;
-  user-select: none;
-  color: white;
+
+  &:hover {
+    transition: 0.5s;
+    border: 3px solid #7d7676;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  p {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    font-size: 30px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    user-select: none;
+    color: white;
+  }
 }
 
 @media (max-width: 1625px) {
-  .map {
+  .MapLink {
     height: 202.5px;
     width: 450px;
   }
 }
 @media (max-width: 1475px) {
-  .map {
+  .MapLink {
     height: 180px;
     width: 400px;
   }
 }
 @media (max-width: 1325px) {
-  .map {
+  .MapLink {
     height: 157.5px;
     width: 350px;
   }
 }
 @media (max-width: 1175px) {
-  .map {
+  .MapLink {
     height: 202.5px;
     width: 450px;
   }
 }
 @media (max-width: 990px) {
-  .map {
+  .MapLink {
     height: 180px;
     width: 400px;
   }
 }
 @media (max-width: 890px) {
-  .map {
+  .MapLink {
     height: 157.5px;
     width: 350px;
   }
 }
 @media (max-width: 790px) {
-  .map {
+  .MapLink {
     height: 135px;
     width: 300px;
   }
 }
 @media (max-width: 690px) {
-  .map {
+  .MapLink {
     height: 127.5px;
     width: 250px;
   }
 }
 @media (max-width: 590px) {
-  .map {
+  .MapLink {
     height: auto;
     width: 80vw;
   }

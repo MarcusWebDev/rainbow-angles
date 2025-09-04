@@ -4,10 +4,10 @@ const ClubHouse = () => {
   return (
     <MapGuide
       header={"CLUB HOUSE"}
-      headerPicture={require("../images/ClubHouse.jpg")}
+      headerImage={require("../images/ClubHouse.jpg")}
       floorNames={["B", "1st", "2nd"]}
       floorStart={[3, 7]}
-      pictures={[
+      images={[
         [
           require("../images/clubHouse/B1_1.png"),
           require("../images/clubHouse/B1_2.png"),
