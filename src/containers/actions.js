@@ -18,9 +18,9 @@ export const prevSlide = (slideIndex, images) => ({
   slideIndex: slideIndex,
   slides: images,
 });
-export const toFloor = (floorStart) => ({
+export const toFloor = (floorStartingIndices) => ({
   type: TO_FLOOR,
-  floorStart: floorStart,
+  floorStartingIndices: floorStartingIndices,
 });
 
 export const toTargetSlide = (targetSlide) => ({

@@ -6,7 +6,7 @@ const ThemePark = () => {
       header={"THEME PARK"}
       headerImage={require("../images/ThemePark.jpg")}
       floorNames={["1st", "2nd"]}
-      floorStart={[6]}
+      floorStartingIndices={[6]}
       images={[
         [
           require("../images/themePark/1st1_1.png"),

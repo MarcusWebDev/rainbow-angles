@@ -31,7 +31,7 @@ The image to display for the map
 
 An array of strings representing the floor names
 
-#### floorStart
+#### floorStartingIndices
 
 An array of integers representing which indices of the images array the next floor starts on (excluding index 0 since the bottom floor always starts at index 0).
 

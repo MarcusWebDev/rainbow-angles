@@ -6,7 +6,7 @@ const KafeDostoyevsky = () => {
       header={"KAFE DOSTOYEVSKY"}
       headerImage={require("../images/KafeDostoyevsky.jpg")}
       floorNames={["1st", "2nd", "3rd"]}
-      floorStart={[3, 7]}
+      floorStartingIndices={[3, 7]}
       images={[
         [
           require("../images/kafeDostoyevsky/1st1_1.png"),

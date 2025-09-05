@@ -1,0 +1,126 @@
+.MobileFloorTabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+
+  .floor-tab {
+    background: #4e7878;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 10px 30px;
+
+    &:hover {
+      transition: ease 0.3s;
+      background: #223535;
+    }
+
+    &.active {
+      transition: ease 0.3s;
+      background: #223535;
+
+      &:before {
+        transition: ease 0.3s;
+        background: #223535;
+      }
+    }
+  }
+
+  .bottom-floor-skew {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 20px;
+    z-index: 1;
+    transition: ease 0.3s;
+
+    &:hover,
+    &.active {
+      &:before,
+      &:after {
+        transition: ease 0.3s;
+        background: #223535;
+      }
+    }
+
+    &:before {
+      display: block;
+      transform: skew(-30deg);
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      background: #4e7878;
+      top: -2px;
+      right: 12px;
+      z-index: -1;
+      border: 2px solid black;
+    }
+
+    &:after {
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      background: #4e7878;
+      top: 0px;
+      left: 0px;
+      z-index: -1;
+    }
+  }
+
+  .top-floor-skew {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 20px;
+    z-index: 1;
+    transition: ease 0.3s;
+
+    &:hover,
+    &.active {
+      &:before,
+      &:after {
+        transition: ease 0.3s;
+        background: #223535;
+      }
+    }
+
+    &:before {
+      display: block;
+      transform: skew(30deg);
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      background: #4e7878;
+      top: -2px;
+      left: 12px;
+      z-index: -1;
+      border: 2px solid black;
+    }
+
+    &:after {
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      background: #4e7878;
+      top: 0px;
+      left: 0px;
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .MobileFloorTabs {
+    .floor-tab {
+      padding: 5px 10px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.FloorTabs {
+  position: absolute;
+  right: 25px;
+  top: -33px;
+  display: flex;
+  flex-direction: row;
+
+  .full-border {
+    border: 2px solid black;
+  }
+
+  .no-left-border {
+    border: 2px solid black;
+    border-left: none;
+  }
+
+  .desktop-skewed-nav-button {
+    position: relative;
+    z-index: 2;
+    right: 70px;
+    transform: skewX(-30deg);
+
+    a {
+      transform: skewX(30deg);
+      display: block;
+    }
+  }
+
+  .desktop-unskewed-nav-button {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    right: 0;
+    width: 50px;
+  }
+
+  .floor-tab {
+    background: #4e7878;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &:hover {
+      transition: ease 0.3s;
+      background: #223535;
+    }
+
+    &.active {
+      transition: ease 0.3s;
+      background: #223535;
+    }
+  }
+}

@@ -9,17 +9,19 @@ import {
   lightBoxOff,
 } from "../../containers/actions";
 import Scroll from "../Scroll";
-import NavBar from "./NavBar.jsx";
+import FloorTabs from "./FloorTabs.jsx";
 import ImageBox from "./ImageBox.jsx";
 import LightBox from "./LightBox.jsx";
 import Dots from "./Dots.jsx";
 import "./Carousel.scss";
+import MobileFloorTabs from "./MobileFloorTabs.jsx";
+import { useOutletContext } from "react-router-dom";
 
 const Carousel = ({
   images,
   slideIndex,
   text,
-  floorStart,
+  floorStartingIndices,
   floorNames,
   lightBoxStatus,
   lightBoxImage,
@@ -30,6 +32,8 @@ const Carousel = ({
   turnOnLightBox,
   turnOffLightBox,
 }) => {
+  const { isDesktop } = useOutletContext();
+
   const shortToFull = {
     B: "Basement",
     "1st": "First Floor",
@@ -44,26 +48,34 @@ const Carousel = ({
       <h1 className="header">
         {fullFloorNames.map((_, i) => {
           if (i === 0) {
-            if (slideIndex < floorStart[0]) {
+            if (slideIndex < floorStartingIndices[0]) {
               return fullFloorNames[0];
             }
           } else if (i === fullFloorNames.length - 1) {
-            if (slideIndex >= floorStart[floorStart.length - 1]) {
+            if (
+              slideIndex >=
+              floorStartingIndices[floorStartingIndices.length - 1]
+            ) {
               return fullFloorNames[fullFloorNames.length - 1];
             }
           } else {
-            if (slideIndex >= floorStart[i - 1] && slideIndex < floorStart[i]) {
+            if (
+              slideIndex >= floorStartingIndices[i - 1] &&
+              slideIndex < floorStartingIndices[i]
+            ) {
               return fullFloorNames[i];
             }
           }
         })}
       </h1>
-      <NavBar
-        floorStart={floorStart}
-        slideIndex={slideIndex}
-        floorNames={floorNames}
-        onClick={(floors) => navigateToFloor(floors)}
-      />
+      {!isDesktop && (
+        <MobileFloorTabs
+          floorStartingIndices={floorStartingIndices}
+          slideIndex={slideIndex}
+          floorNames={floorNames}
+          onClick={(floors) => navigateToFloor(floors)}
+        />
+      )}
       <div className="content-container">
         <div className="carousel-container">
           <div>
@@ -98,20 +110,23 @@ const Carousel = ({
           />
         </div>
         <div className="text-container">
-          <div className="desktop">
-            <NavBar
-              floorStart={floorStart}
-              slideIndex={slideIndex}
-              floorNames={floorNames}
-              onClick={(floors) => navigateToFloor(floors)}
-            />
-            <Scroll>
-              <p className="angles-text">{text[slideIndex]}</p>
-            </Scroll>
-          </div>
-          <div className="angles-text phone">
-            <p>{text[slideIndex]}</p>
-          </div>
+          {isDesktop ? (
+            <>
+              <FloorTabs
+                floorStartingIndices={floorStartingIndices}
+                slideIndex={slideIndex}
+                floorNames={floorNames}
+                onClick={(floors) => navigateToFloor(floors)}
+              />
+              <Scroll>
+                <p className="angles-text">{text[slideIndex]}</p>
+              </Scroll>
+            </>
+          ) : (
+            <div className="angles-text phone">
+              <p>{text[slideIndex]}</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -134,8 +149,8 @@ const mapDispatchToProps = (dispatch) => {
     slideChangePrev: (slideIndex, images) => {
       dispatch(prevSlide(slideIndex, images));
     },
-    navigateToFloor: (floorStart) => {
-      dispatch(toFloor(floorStart));
+    navigateToFloor: (floorStartingIndices) => {
+      dispatch(toFloor(floorStartingIndices));
     },
     navigateToTargetSlide: (targetSlide) => {
       dispatch(toTargetSlide(targetSlide));

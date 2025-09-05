@@ -6,7 +6,7 @@ const Bank = () => {
       header={"BANK"}
       headerImage={require("../images/Bank.jpg")}
       floorNames={["B", "1st", "2nd"]}
-      floorStart={[1, 4]}
+      floorStartingIndices={[1, 4]}
       images={[
         [
           require("../images/bank/B1_1.png"),

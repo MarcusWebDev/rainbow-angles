@@ -6,7 +6,7 @@ const Hereford = () => {
       header={"HEREFORD"}
       headerImage={require("../images/Hereford.jpg")}
       floorNames={["B", "1st", "2nd", "3rd"]}
-      floorStart={[2, 4, 5]}
+      floorStartingIndices={[2, 4, 5]}
       images={[
         [
           require("../images/hereford/B1_1.png"),

@@ -6,7 +6,7 @@ const Border = () => {
       header={"Border"}
       headerImage={require("../images/Border.jpg")}
       floorNames={["1st", "2nd"]}
-      floorStart={[4]}
+      floorStartingIndices={[4]}
       images={[
         [
           require("../images/border/1st1_1.png"),

@@ -25,7 +25,7 @@ const MapGuide = ({
   header,
   text,
   images,
-  floorStart,
+  floorStartingIndices,
   floorNames,
 }) => {
   const [hasScrolled, setHasScrolled] = React.useState(false);
@@ -78,7 +78,7 @@ const MapGuide = ({
       <Carousel
         images={images}
         text={text}
-        floorStart={floorStart}
+        floorStartingIndices={floorStartingIndices}
         floorNames={floorNames}
       />
     </div>

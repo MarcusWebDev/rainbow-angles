@@ -32,7 +32,7 @@ export const controlCarousel = (state = initialStateCarousel, action = {}) => {
     }
     case TO_FLOOR: {
       return Object.assign({}, state, {
-        slideIndex: action.floorStart,
+        slideIndex: action.floorStartingIndices,
       });
     }
     case TO_TARGET_SLIDE: {

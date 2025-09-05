@@ -6,7 +6,7 @@ const Coastline = () => {
       header={"COASTLINE"}
       headerImage={require("../images/Coastline.jpg")}
       floorNames={["1st", "2nd"]}
-      floorStart={[3]}
+      floorStartingIndices={[3]}
       images={[
         [
           require("../images/coastline/1st1_1.png"),

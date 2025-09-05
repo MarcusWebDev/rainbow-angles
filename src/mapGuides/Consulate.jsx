@@ -6,7 +6,7 @@ const Consulate = () => {
       header={"CONSULATE"}
       headerImage={require("../images/Consulate.jpg")}
       floorNames={["B", "1st", "2nd"]}
-      floorStart={[4, 6]}
+      floorStartingIndices={[4, 6]}
       images={[
         [
           require("../images/consulate/B1_1.png"),
