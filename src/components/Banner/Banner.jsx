@@ -20,8 +20,8 @@ const Banner = () => {
         <p>RAINBOW ANGLES</p>
       </Link>
       <nav>
-        <a onClick={() => urlCheck("aboutText")}>ABOUT</a>
-        <a onClick={() => urlCheck("mapListContainer")}>MAPS</a>
+        <a onClick={() => urlCheck("about-text")}>ABOUT</a>
+        <a onClick={() => urlCheck("map-list-container")}>MAPS</a>
         <a onClick={() => urlCheck("branding")}>CONTACT</a>
       </nav>
     </div>
