@@ -8,7 +8,6 @@ import "./index.scss";
 
 import App from "./App.jsx";
 import HomePage from "./components/HomePage";
-import { controlCarousel } from "./containers/reducers.js";
 import Bank from "./mapGuides/Bank.jsx";
 import Border from "./mapGuides/Border.jsx";
 import Chalet from "./mapGuides/Chalet.jsx";
@@ -21,6 +20,8 @@ import Oregon from "./mapGuides/Oregon.jsx";
 import Skyscraper from "./mapGuides/Skyscraper.jsx";
 import ThemePark from "./mapGuides/ThemePark.jsx";
 import Villa from "./mapGuides/Villa.jsx";
+import carouselReducer from "./slices/carouselSlice.js";
+import generalReducer from "./slices/generalSlice.js";
 
 const router = createHashRouter([
   {
@@ -83,7 +84,11 @@ const router = createHashRouter([
   },
 ]);
 
-const rootReducer = combineReducers({ controlCarousel });
+const rootReducer = combineReducers({
+  general: generalReducer,
+  carousel: carouselReducer,
+});
+
 const store = configureStore({
   reducer: rootReducer,
 });

@@ -1,6 +1,6 @@
 import "./Dots.scss";
 
-const Dots = ({ images, index, navigateToTargetSlide }) => {
+const Dots = ({ images, index, onClick }) => {
   return (
     <div className="Dots">
       {images.map((_, i) => {
@@ -9,7 +9,7 @@ const Dots = ({ images, index, navigateToTargetSlide }) => {
             className={`dot ${index === i ? "active" : ""}`}
             key={i}
             onClick={() => {
-              navigateToTargetSlide(i);
+              onClick(i);
             }}
           />
         );

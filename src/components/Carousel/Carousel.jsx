@@ -1,16 +1,14 @@
-import { connect } from "react-redux";
-import { useOutletContext } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 import "./Carousel.scss";
 
 import {
-  lightBoxOff,
-  lightBoxOn,
+  navigateToSlide,
   nextSlide,
   prevSlide,
-  toFloor,
-  toTargetSlide,
-} from "../../containers/actions";
+  turnOffLightBox,
+  turnOnLightBox,
+} from "../../slices/carouselSlice";
 import Scroll from "../Scroll";
 import Arrow from "./Arrow.jsx";
 import Dots from "./Dots.jsx";
@@ -19,22 +17,10 @@ import ImageBox from "./ImageBox.jsx";
 import LightBox from "./LightBox.jsx";
 import MobileFloorTabs from "./MobileFloorTabs.jsx";
 
-const Carousel = ({
-  images,
-  slideIndex,
-  text,
-  floorStartingIndices,
-  floorNames,
-  lightBoxStatus,
-  lightBoxImage,
-  slideChangeNext,
-  slideChangePrev,
-  navigateToFloor,
-  navigateToTargetSlide,
-  turnOnLightBox,
-  turnOffLightBox,
-}) => {
-  const { isDesktop } = useOutletContext();
+const Carousel = ({ images, text, floorStartingIndices, floorNames }) => {
+  const { slideIndex, lightBoxImage } = useSelector((state) => state.carousel);
+  const { isDesktop } = useSelector((state) => state.general);
+  const dispatch = useDispatch();
 
   const shortToFull = {
     B: "Basement",
@@ -75,7 +61,7 @@ const Carousel = ({
           floorStartingIndices={floorStartingIndices}
           slideIndex={slideIndex}
           floorNames={floorNames}
-          onClick={(floors) => navigateToFloor(floors)}
+          onClick={(index) => dispatch(navigateToSlide({ slideIndex: index }))}
         />
       )}
       <div className="content-container">
@@ -83,32 +69,33 @@ const Carousel = ({
           <div>
             <Arrow
               direction="left"
-              onClick={() => {
-                slideChangePrev(slideIndex, images);
-              }}
+              onClick={() =>
+                dispatch(prevSlide({ slideIndex, slides: images }))
+              }
             />
             <Scroll>
               <ImageBox
                 images={images[slideIndex]}
-                onClick={(image) => turnOnLightBox(image)}
+                onClick={(image) => dispatch(turnOnLightBox({ image }))}
               />
               <LightBox
                 image={lightBoxImage}
-                status={lightBoxStatus}
-                onClick={() => turnOffLightBox()}
+                onClick={() => dispatch(turnOffLightBox())}
               />
             </Scroll>
             <Arrow
               direction="right"
-              onClick={() => {
-                slideChangeNext(slideIndex, images);
-              }}
+              onClick={() =>
+                dispatch(nextSlide({ slideIndex, slides: images }))
+              }
             />
           </div>
           <Dots
             images={images}
             index={slideIndex}
-            navigateToTargetSlide={navigateToTargetSlide}
+            onClick={(index) =>
+              dispatch(navigateToSlide({ slideIndex: index }))
+            }
           />
         </div>
         <div className="text-container">
@@ -118,7 +105,9 @@ const Carousel = ({
                 floorStartingIndices={floorStartingIndices}
                 slideIndex={slideIndex}
                 floorNames={floorNames}
-                onClick={(floors) => navigateToFloor(floors)}
+                onClick={(index) =>
+                  dispatch(navigateToSlide({ slideIndex: index }))
+                }
               />
               <Scroll>
                 <p className="angles-text">{text[slideIndex]}</p>
@@ -135,35 +124,4 @@ const Carousel = ({
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    slideIndex: state.controlCarousel.slideIndex,
-    lightBoxStatus: state.controlCarousel.lightBoxStatus,
-    lightBoxImage: state.controlCarousel.lightBoxImage,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    slideChangeNext: (slideIndex, images) => {
-      dispatch(nextSlide(slideIndex, images));
-    },
-    slideChangePrev: (slideIndex, images) => {
-      dispatch(prevSlide(slideIndex, images));
-    },
-    navigateToFloor: (floorStartingIndices) => {
-      dispatch(toFloor(floorStartingIndices));
-    },
-    navigateToTargetSlide: (targetSlide) => {
-      dispatch(toTargetSlide(targetSlide));
-    },
-    turnOnLightBox: (lightBoxImage) => {
-      dispatch(lightBoxOn(lightBoxImage));
-    },
-    turnOffLightBox: () => {
-      dispatch(lightBoxOff());
-    },
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Carousel);
+export default Carousel;

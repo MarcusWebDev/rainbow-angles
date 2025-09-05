@@ -1,34 +1,34 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Outlet } from "react-router-dom";
 
 import "./App.scss";
 
 import Banner from "./components/Banner";
+import { determineIsDesktop } from "./slices/generalSlice";
 
 const App = () => {
-  const [isDesktop, setIsDesktop] = React.useState(false);
+  const dispatch = useDispatch();
 
   React.useEffect(() => {
-    const determineIfDesktop = () => {
-      if (window.innerWidth < 1060) {
-        setIsDesktop(false);
-      } else {
-        setIsDesktop(true);
-      }
+    // This function is created so that the addEventListener and removeEventListener can reference the same function.
+    const dispatchDetermineIsDesktop = () => {
+      dispatch(determineIsDesktop());
     };
 
-    determineIfDesktop();
+    dispatchDetermineIsDesktop();
 
-    window.addEventListener("resize", determineIfDesktop);
+    window.addEventListener("resize", dispatchDetermineIsDesktop);
 
-    return () => window.removeEventListener("resize", determineIfDesktop);
+    return () =>
+      window.removeEventListener("resize", dispatchDetermineIsDesktop);
   }, []);
 
   return (
     <div className="App">
       <Banner />
       <div className="content-container">
-        <Outlet context={{ isDesktop }} />
+        <Outlet />
       </div>
     </div>
   );

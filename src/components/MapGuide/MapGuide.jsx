@@ -1,28 +1,13 @@
 import React from "react";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import "./MapGuide.scss";
 
-import { toTargetSlide } from "../../containers/actions";
+import { navigateToSlide } from "../../slices/carouselSlice";
 import scrollTo from "../../utils/scrollTo";
 import Carousel from "../Carousel";
 
-const mapStateToProps = (state) => {
-  return {
-    slideIndex: state.controlCarousel.slideIndex,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    navigateToTargetSlide: (targetSlide) => {
-      dispatch(toTargetSlide(targetSlide));
-    },
-  };
-};
-
 const MapGuide = ({
-  navigateToTargetSlide,
   headerImage,
   header,
   text,
@@ -31,6 +16,7 @@ const MapGuide = ({
   floorNames,
 }) => {
   const [hasScrolled, setHasScrolled] = React.useState(false);
+  const dispatch = useDispatch();
 
   const handleScroll = React.useCallback(() => {
     if (!hasScrolled) {
@@ -40,7 +26,7 @@ const MapGuide = ({
 
   React.useLayoutEffect(() => {
     window.scrollTo(0, 0);
-    navigateToTargetSlide(0);
+    dispatch(navigateToSlide({ slideIndex: 0 }));
   }, []);
 
   React.useEffect(() => {
@@ -87,4 +73,4 @@ const MapGuide = ({
   );
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MapGuide);
+export default MapGuide;
