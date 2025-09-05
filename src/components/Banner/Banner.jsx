@@ -1,5 +1,7 @@
-import "./Banner.scss";
 import { Link } from "react-router-dom";
+
+import "./Banner.scss";
+
 import scrollTo from "../../utils/scrollTo";
 
 const urlCheck = (location) => {

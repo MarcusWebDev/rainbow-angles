@@ -1,21 +1,23 @@
 import { connect } from "react-redux";
-import Arrow from "./Arrow.jsx";
+import { useOutletContext } from "react-router-dom";
+
+import "./Carousel.scss";
+
 import {
+  lightBoxOff,
+  lightBoxOn,
   nextSlide,
   prevSlide,
   toFloor,
   toTargetSlide,
-  lightBoxOn,
-  lightBoxOff,
 } from "../../containers/actions";
 import Scroll from "../Scroll";
+import Arrow from "./Arrow.jsx";
+import Dots from "./Dots.jsx";
 import FloorTabs from "./FloorTabs.jsx";
 import ImageBox from "./ImageBox.jsx";
 import LightBox from "./LightBox.jsx";
-import Dots from "./Dots.jsx";
-import "./Carousel.scss";
 import MobileFloorTabs from "./MobileFloorTabs.jsx";
-import { useOutletContext } from "react-router-dom";
 
 const Carousel = ({
   images,

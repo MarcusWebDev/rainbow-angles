@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import "./MapLink.scss";
 
 const Maps = ({ to, title, image }) => {

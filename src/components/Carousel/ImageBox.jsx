@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./ImageBox.scss";
 
 const Image = ({ imageSrc, onClick }) => {

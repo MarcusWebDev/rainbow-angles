@@ -1,9 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
+
 import "./MapGuide.scss";
-import Carousel from "../Carousel";
+
 import { toTargetSlide } from "../../containers/actions";
 import scrollTo from "../../utils/scrollTo";
+import Carousel from "../Carousel";
 
 const mapStateToProps = (state) => {
   return {

@@ -3,8 +3,8 @@ import {
   PREV_SLIDE,
   TO_FLOOR,
   TO_TARGET_SLIDE,
-  TURN_ON_LIGHT_BOX,
   TURN_OFF_LIGHT_BOX,
+  TURN_ON_LIGHT_BOX,
 } from "./constants";
 
 const initialStateCarousel = {

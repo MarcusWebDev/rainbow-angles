@@ -1,6 +1,8 @@
 import React from "react";
-import "./App.scss";
 import { Outlet } from "react-router-dom";
+
+import "./App.scss";
+
 import Banner from "./components/Banner";
 
 const App = () => {

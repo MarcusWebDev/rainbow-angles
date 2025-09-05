@@ -1,10 +1,11 @@
 import React from "react";
-import "./HomePage.scss";
-import MapLink from "../MapLink";
-import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
+
+import "./HomePage.scss";
 import "react-multi-carousel/lib/styles.css";
+
 import scrollTo from "../../utils/scrollTo";
+import MapLink from "../MapLink";
 
 const responsive = {
   all: {

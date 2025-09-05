@@ -1,11 +1,14 @@
-import { createRoot } from "react-dom/client";
-import { combineReducers } from "redux";
 import { configureStore } from "@reduxjs/toolkit";
+import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import { controlCarousel } from "./containers/reducers.js";
+import { RouterProvider, createHashRouter } from "react-router-dom";
+import { combineReducers } from "redux";
+
 import "./index.scss";
+
 import App from "./App.jsx";
 import HomePage from "./components/HomePage";
+import { controlCarousel } from "./containers/reducers.js";
 import Bank from "./mapGuides/Bank.jsx";
 import Border from "./mapGuides/Border.jsx";
 import Chalet from "./mapGuides/Chalet.jsx";
@@ -18,7 +21,6 @@ import Oregon from "./mapGuides/Oregon.jsx";
 import Skyscraper from "./mapGuides/Skyscraper.jsx";
 import ThemePark from "./mapGuides/ThemePark.jsx";
 import Villa from "./mapGuides/Villa.jsx";
-import { RouterProvider, createHashRouter } from "react-router-dom";
 
 const router = createHashRouter([
   {
