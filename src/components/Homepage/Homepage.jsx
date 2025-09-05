@@ -195,7 +195,7 @@ const HomePage = () => {
         </ul>
         <a
           className="back-to-top"
-          onClick={() => scrollTo({ target: "bgVideo" })}
+          onClick={() => scrollTo({ target: "multi-carousel-container" })}
         >
           Back to the Top
         </a>
