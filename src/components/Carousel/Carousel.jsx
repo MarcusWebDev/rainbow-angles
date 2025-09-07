@@ -17,7 +17,12 @@ import ImageBox from "./ImageBox.jsx";
 import LightBox from "./LightBox.jsx";
 import MobileFloorTabs from "./MobileFloorTabs.jsx";
 
-const Carousel = ({ images, text, floorStartingIndices, floorNames }) => {
+const Carousel = ({
+  images,
+  descriptions,
+  floorStartingIndices,
+  floorNames,
+}) => {
   const { slideIndex, lightBoxImage } = useSelector((state) => state.carousel);
   const { isDesktop } = useSelector((state) => state.general);
   const dispatch = useDispatch();
@@ -110,12 +115,12 @@ const Carousel = ({ images, text, floorStartingIndices, floorNames }) => {
                 }
               />
               <Scroll>
-                <p className="angles-text">{text[slideIndex]}</p>
+                <p className="angles-text">{descriptions[slideIndex]}</p>
               </Scroll>
             </>
           ) : (
             <div className="angles-text phone">
-              <p>{text[slideIndex]}</p>
+              <p>{descriptions[slideIndex]}</p>
             </div>
           )}
         </div>

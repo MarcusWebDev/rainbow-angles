@@ -45,7 +45,7 @@ const Chalet = () => {
           require("../images/chalet/2nd3_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "This angle works great for both attackers and defenders. For attackers you can use it to destroy Bandit traps and Mute jammers. As a defender you can hold this angle since it is very common for attackers to breach through the basement garage door.",
         "If you open the hatch in 1F Dining Room, you can watch the doorway into the wine room in basement. This is a very common place for attackers to try to enter basement from, so holding an angle on this doorway from above is very powerful!",
         "This angle allows you to watch the door in the small car garage in basement. It is common for people to breach through the western garage door in that room as well, so be wary of that as you won't have as good of an angle if they approach from there.",

@@ -33,7 +33,7 @@ const Skyscraper = () => {
           require("../images/skyscraper/2nd1_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "You can see the middle of 1F Restaurant form 2F Tea Room using this angle.",
         "This angle lets you watch the eastern entrance to 1F Pantry from 2F Taiko. This is a good angle to hold if the objective is in 1F Kitchen.",
         "It's possible to watch the doorway entrance to 1F House Lobby from 2F Exhibition using this angle. However, it is rather risky as the window that you're standing infront of in 2F Exhibition is a common place for attackers to enter from.",

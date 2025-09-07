@@ -41,7 +41,7 @@ const KafeDostoyevsky = () => {
           require("../images/kafeDostoyevsky/3rd1_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "Opening the floor near the Chimney in 2F Fireplace Hall lets you watch the doorway leading from 1F Cold Room Corridor to 1F Kitchen Pick Up. You'll be watching from the Kitchen side. Great angle to hold if the objective is in 1F Kitchen Grill.",
         "You can watch 1F Front Stairs (Red Stairs) from 2F Museum Entrance using this angle.",
         "This angle lets you watch the intersection between 1F Cold Room Corridor, 1F Main Corridor, and 1F Dining Room.",

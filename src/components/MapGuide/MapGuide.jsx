@@ -8,12 +8,12 @@ import scrollTo from "../../utils/scrollTo";
 import Carousel from "../Carousel";
 
 const MapGuide = ({
-  headerImage,
   header,
-  text,
-  images,
+  headerImage,
   floorStartingIndices,
   floorNames,
+  images,
+  descriptions,
 }) => {
   const [hasScrolled, setHasScrolled] = React.useState(false);
   const dispatch = useDispatch();
@@ -65,7 +65,7 @@ const MapGuide = ({
       </div>
       <Carousel
         images={images}
-        text={text}
+        descriptions={descriptions}
         floorStartingIndices={floorStartingIndices}
         floorNames={floorNames}
       />

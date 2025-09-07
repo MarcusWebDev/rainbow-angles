@@ -33,7 +33,7 @@ const Bank = () => {
           require("../images/bank/2nd2_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "This angle lets you watch the doorway to B CCTV Room from B Lockers. The angle does leave you somewhat vulnerable however, since this is the first directions attackers will be looking as they come through the door. This angle works better with the holes being Mira walls for that reason.",
         "Destroying the left side of the western wall of 2F Hallway lets you watch over two windows on the west side of 1F Lobby that are common entry points for attackers.",
         "This is a great angle to hold if the objective is in 1F Open Area as it watches the hallway attackers must go through if they approach from the eastern window of 1F Open Area. If the attackers decide to repel to 2F, however, you will be vulnerable as it is common for attackers to enter through the window you'll be standing infront of for this angle.",

@@ -38,7 +38,7 @@ const Border = () => {
           require("../images/border/2nd3_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "Opening the hatch in 2F Offices lets you watch over 1F Tellers, which is also an objective site for all three game modes. It is possible to see the entire room, except for the window from this angle.",
         "If you create a hole in the eastern wall of 2F Break Room, you can look out over all of the lobby and even see part of the hallway on 2F.",
         "This angle will allow you to catch anyone coming from the lobby or the bathroom hallway on first floor. You'll need to be careful of people coming from western side of the hallway and the security room, however.",

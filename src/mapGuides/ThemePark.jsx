@@ -41,7 +41,7 @@ const ThemePark = () => {
           require("../images/themePark/2nd2_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "If you destroy the floor infront of the refrigerator in 2F Cafe, you can see the window in 1F Arcade Toilet. Attackers frequently open this window, making this a powerful angle to hold. However, attackers also frequently enter the building through 2F Cafe, so it is somewhat risky to hold this angle as well.",
         "Opening the floor infront of the entrance to 2F Cafe allows you two angles. One watching to doorway to 1F Arcade Toilet from the hallway, and one looking down into a common spot in 1F Drug Lab for defenders to be hiding.",
         "You can also watch the entrance to 1F Arcade Toilet from this angle in 2F Day Care.",

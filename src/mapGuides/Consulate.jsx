@@ -47,7 +47,7 @@ const Consulate = () => {
           require("../images/consulate/2nd3_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "This angle is excellent for defending B Archives. It allows you to watch the western entrance to the room, as well as the spiral staircase and the hallway to garage. Also, the only visible part of your body is your head. You do need to destroy the computer and the folder holder on the desks infront of this angle, however.",
         "This angle could catch players coming from 1F Service Stairs into kitchen.",
         "The shelves and boxes infront of this angle do a good job of hiding your body just long enough for you to get the kill on anyone who walks into B Storage Room.",

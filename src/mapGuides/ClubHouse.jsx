@@ -56,7 +56,7 @@ const ClubHouse = () => {
           require("../images/clubHouse/2nd3_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "Destroying the floor here allows you to see the doorway leading to the stairs in Basement. This could be good for attackers because it will allow you to check if anyone is watching the stairs before proceeding down. Be careful though, destroying the floor will also alert defenders.",
         "If you really want, you can destroy the floor in 1F kitchen and the top of the wall in B Armory and watch the hallway from above. This could trick attackers as they'll be looking through the hole in the wall to find people in basement, but you'll be watching from above.",
         "This angle allows you to see the entrance to B Church and the hallway leading to it. Having an attacker watch this angle while their team proceeds downstairs could be beneficial.",

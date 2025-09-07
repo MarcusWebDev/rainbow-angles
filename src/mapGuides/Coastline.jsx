@@ -36,7 +36,7 @@ const Coastline = () => {
           require("../images/coastline/2nd3_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "You can watch every entrance to 1F Blue Bar from 2F Billiards as demostrated by the next 3 angles. This angle allows you to watch the northern doorway entrance.",
         "This angle allows you to watch the southern entrance to 1F Blue Bar.",
         "You can also watch the window in 1F Blue Bar from above as well using this angle.",

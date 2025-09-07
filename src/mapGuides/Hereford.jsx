@@ -33,7 +33,7 @@ const Hereford = () => {
           require("../images/hereford/3rd1_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "This angle allows you to watch the doorway to B Brewery from B Barrel Storage. The pots on the bricks help cover your body.",
         "You can watch the western doorway entrance to B Barrel Storage from 1F Piano Room using this angle. Great angle to hold if the objective is in B Barrel Storage.",
         "With two small holes in the western wall of 1F Kitchen, you can watch both entrances to 1F Garage; the window and the garage door.",

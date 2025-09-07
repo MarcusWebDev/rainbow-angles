@@ -33,7 +33,7 @@ const Oregon = () => {
           require("../images/oregon/2nd2_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "Opening the floor at the top of 1F Main Stairs lets you watch the B Laundry Stairs. This a good angle for both attackers and defenders.",
         "You can watch the hatch in 1F Lobby from 2F Master Bedroom using this angle. This hatch is the most frequently opened hatch by attackers, so being able to watch it from above is incredibly powerful.",
         "This angle lets you watch the hallway connecting 1F Diing Hall Corridor to 1F Bathroom Corridor.",

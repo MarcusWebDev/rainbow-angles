@@ -33,7 +33,7 @@ const Villa = () => {
           require("../images/villa/2nd3_2.png"),
         ],
       ]}
-      text={[
+      descriptions={[
         "This angle is good for anchoring on the objective in B Art Storage. Vault onto the pile of boxes in the north western section of 2F Art Storage and then prone to hold this angle on the eastern doorway entrance to the room. The corner you're prone in is very dark, hiding your body.",
         "This angle lets you watch the doorway into 1F China Room from 2F Trophy Room. This is a good angle to hold if the objective is in 1F Kitchen.",
         "If you destroy the floor on the southern end of 2F Classical Hall, you can watch the doorway at 1F Main Entrance. Attackers frequently enter the building through this doorway, making this angle very powerful to hold.",
