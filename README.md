@@ -9,34 +9,34 @@ Scroll down to the image carousel. To navigate the image carousel you can click 
 
 ## How to add more maps
 
-If you'd like to develop for the project and add additional maps, you can do so in index.js by adding a new child to `App` in the `createHashRouter`. The child will require a path field and a component field. The component field should be a react component that makes use of the `<MapGuide>` component.
+If you'd like to develop for the project and add additional maps, you can do so in index.js by adding a new child to `App` in the `createHashRouter`. The child will require a `path` field and a `component` field. The component field should be a react component that makes use of the `<MapGuide>` component.
 
 ### `<MapGuide />`
 
 `<MapGuide />` takes several props:
 
-#### header
+#### `header`
 
 A string representing the name of the map to display.
 
-#### headerImage
+#### `headerImage`
 
 The image to display for the map.
 
-#### floorNames
+#### `floorNames`
 
 An array of strings representing the floor names.
 
-#### floorStartingIndices
+#### `floorStartingIndices`
 
 An array of integers representing which indices of the images array the next floor starts on (excluding index 0 since the bottom floor always starts at index 0).
 
-#### images
+#### `images`
 
 A two dimensional array of images in the form `images[angleIndex][imageIndex]` where angleIndex is the index of the angle being shown and imageIndex is the particular
 image for that angle.
 
-#### description
+#### `description`
 
 An array of strings describing the angle being discussed at `descriptions[angleIndex]` where angleIndex is the index of the angle being shown.
 
