@@ -20,7 +20,7 @@ const MapGuide = ({
   React.useEffect(() => {
     // Not using react-scroll's delay here because it will scroll the page to where it was when the scroll call first occurred and do the scroll
     // animation from there. This approach will allow us to scroll to the header from the current position when the time to scroll comes.
-    let scrollTimeoutId = setTimeout(
+    const scrollTimeoutId = setTimeout(
       () => scrollTo({ target: "header" }),
       1000,
     );
