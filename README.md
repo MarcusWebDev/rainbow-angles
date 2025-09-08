@@ -2,7 +2,7 @@
 
 Rainbow Angles is a website highlighting good angles on ranked maps of Rainbow Six Siege.
 
-The website can be found at rainbowangles.com.
+The website can be found at [rainbowangles.com](https://rainbowangles.com/).
 
 ## How to use
 
