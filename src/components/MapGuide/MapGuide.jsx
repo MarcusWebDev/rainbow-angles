@@ -15,42 +15,21 @@ const MapGuide = ({
   images,
   descriptions,
 }) => {
-  const [hasScrolled, setHasScrolled] = React.useState(false);
   const dispatch = useDispatch();
 
-  const handleScroll = React.useCallback(() => {
-    if (!hasScrolled) {
-      setHasScrolled(true);
-    }
-  }, [hasScrolled]);
+  React.useEffect(() => {
+    // Not using react-scroll's delay here because it will scroll the page to where it was when the scroll call first occurred and do the scroll
+    // animation from there. This approach will allow us to scroll to the header from the current position when the time to scroll comes.
+    let scrollTimeoutId = setTimeout(
+      () => scrollTo({ target: "header" }),
+      1000,
+    );
 
-  React.useLayoutEffect(() => {
     window.scrollTo(0, 0);
     dispatch(navigateToSlide({ slideIndex: 0 }));
-  }, []);
 
-  React.useEffect(() => {
-    let scrollTimeoutId;
-
-    if (!hasScrolled) {
-      scrollTimeoutId = setTimeout(
-        () => scrollTo({ target: "anglesHeader" }),
-        1000,
-      );
-    }
-
-    return () => {
-      clearTimeout(scrollTimeoutId);
-    };
-  }, [hasScrolled]);
-
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
+    return () => clearTimeout(scrollTimeoutId);
+  }, [dispatch]);
 
   return (
     <div className="MapGuide">
